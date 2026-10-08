@@ -5,123 +5,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Re Piola Games</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  <!-- Librería de iconos de fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Librería de iconos de fontawesome -->
 </head>
 
 
 <body>
-
     <header>
-                      <!-- LOGO -->
-        <div> 
-            <a href="#">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="./index.html">
                 <span>🎮</span>
                 <span>Re Piola Games</span>
                 <span>🎮</span>
             </a>
         </div>
-  
 
-                 <!--  NAVEGACIÓn PRINCIPAL   -->
-
+        <!--  NAVEGACIÓN PRINCIPAL   -->
         <nav>
             <ul>
-                <li> <a href="./index.html">Inicio</a></li>
+                <li> <a href="./index.html" class="activo">Inicio</a></li>
                 <li> <a href="./contacto.html">Contacto</a></li>
-                <li> <a href="./producto.html">Juegos</a></li>
+                <li> <a href="./juegos.html">Juegos</a></li>
                 <li> <a href="./perfil.html">Perfil</a></li>
                 <li> <a href="./login.html">Login</a></li>
                 <li> <a href="./noticias.html">Noticias</a></li>
-                
             </ul>
         </nav>
 
         <!--  BUSCADOR   -->
-
-        <form>  
+        <form class="buscador">
             <label for="buscar">Buscar juegos </label>
-            <input type="text" id="search" name="search" placeholder="Buscar...">   
-            <button type="submit">🔍</button>        
+            <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos...">
+            <button type="submit">🔍</button>
         </form>
 
         <!--  NOTIFICACIONES   -->
-
-        <div>
+        <div class="usuario-panel">
             <button type="button">🔔</button>
             <a href="./login.html">
                 <img src="img/usuario.jpg" alt="Perfil de Usuario">
             </a>
-            </div>
-
+        </div>
     </header>
 
-        <!-------------  CONTENIDO PRINCIPAL --------- -->
-
+    <!-------------  CONTENIDO PRINCIPAL --------- -->
     <main>
-                       <!-----  HERO  ----->
+        <!-----  HERO  ----->
         <section id="hero">
-
-            <div>   
-                <h1>Tu mundo gamer
-                    <span>en un solo lugar</span>
-                </h1>
-
+            <div class="hero-texto">
+                <h1>Tu mundo gamer <span>en un solo lugar</span> </h1>
                 <p>
-                    Bienvenido a Re Piola Games, tu destino definitivo para todo lo relacionado con videojuegos. Explora nuestras últimas noticias, descubre nuevos juegos y mantente al día con las tendencias del mundo gamer.
+                    Bienvenido a Re Piola Games, tu destino definitivo para todo lo relacionado con videojuegos. Explora
+                    nuestras últimas noticias, descubre nuevos juegos y mantente al día con las tendencias del mundo
+                    gamer.
                 </p>
-
-                <div>
-                    <a href="#">Unirme ahora</a>
-                    <a href="./producto.html">Explorar Juegos</a>
+                <div class="hero-botones">
+                    <a href="./contacto.html" class="btn">Unirme ahora</a>
+                    <a href="./juegos.html" class="btn-secundario">Explorar Juegos</a>
                 </div>
-            </div>    
-            
-                <!-------------  Imagen principal --------- -->
-
-
-            <div>
-                <img src="./img/Fondoproyecto.png" alt="Imagen principal de videojuegos">
             </div>
 
-        </section>    
-
-                <!-------------  Juegos Populares --------- -->
-
-        <section id="juegos-populares">
-
-            <header>
-                <h2>Lo mas popular</h2>
-                <a href="./producto.html">Ver todos <i class="fa-solid fa-arrow-right"></i> </a>
-            </header>
-
-
+            <!-------------  Imagen principal --------- -->
+            <div class="hero-imagen">
+                <img src="./img/Fondoproyecto.png" alt="Imagen principal de videojuegos">
+            </div>
         </section>
 
-    </main>    
 
-    <div>
+        <!-- SECCIÓN CARRUSEL
+         HECHO CON IA, REVISAR CON LUCHO -->
+        <section id="carrusel-seccion">
+            <h2>Juegos destacados</h2>
+
+            <div class="carrusel-contenedor">
+                <!-- botón retroceder -->
+                <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <!-- imagen dinámica que cambiará con JS -->
+                <div class="carrusel-slide">
+                    <img src="./img/CallOfDuty.webp" alt="juego en carrusel" id="img-carrusel">
+                </div>
+
+                <!-- botón avanzar -->
+                <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN POPULARES / TARJETAS
+        <section id="juegos-populares">
+            <div class="seccion-encabezado">
+                <h2>Lo más popular</h2>
+                <a href="./juegos.html">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            Grilla o lista de juegos
+            <div class="juegos-grid">
+                <article class="tarjeta-juego">
+                    <img src="./img/CallOfDuty.webp" alt="Call of Duty">
+                    <h3>Call of Duty</h3>
+                    <article class="tarjeta-juego">
+                        <img src="./img/Fornite.webp" alt="Fornite">
+                        <h3>Fornite</h3>
+                    </article>
+                    <article class="tarjeta-juego">
+                        <img src="./img/GtaV.webp" alt="Gta V">
+                        <h3>GTA V</h3>
+                    </article>
+                </article>
+            </div>
+        </section>>
+        -->
+
+
+        <!-------------  Juegos Populares --------- -->
+        <section id="juegos-populares">
+            <header>
+                <h2>Lo mas popular</h2>
+                <a href="./juegos.html">Ver todos <i class="fa-solid fa-arrow-right"></i> </a>
+            </header>
+        </section>
+
+    </main>
+
+    <!-- <div>
         <img src="./img/CallOfDuty.webp" alt="Call of duty">
         <img src="./img/Fornite.webp" alt="Fornite">
         <img src="./img/GtaV.webp" alt="Gta V">
         <img src="img/Minecraft.webp" alt="Minecraft">
         <img src="img/TheLastRonin.webp" alt="The Last Ronin">
-    </div>
+    </div> -->
 
-    <div>
-        <h2>¿Quiénes somos?</h2>
-        <p>
-            Somos un grupo de estudiantes realizando una página web sobre
-            videojuegos. Aún en desarrollo... Este contenido mejorará.
-        </p>
-    </div>
-    
-     <!-- Como llamar iconos de la librería de fontawesome, se puede hacer de la siguiente manera: -->
+    <footer>
+        <div class="footer-info">
+            <h2>¿Quiénes somos?</h2>
+            <p>
+                Somos un grupo de estudiantes realizando una página web sobre
+                videojuegos. Aún en desarrollo... Este contenido mejorará.
+            </p>
+        </div>
 
-       <i class="fa-solid fa-user"></i>
-       <i class="fa-solid fa-bell"></i>
-       <i class="fa-regular fa-calendar"></i>
-       <i class="fa-brands fa-github"></i> 
-       
+        <div class="footer-redes">
+            <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" aria-label="GitHub"> <i
+                    class="fa-brands fa-github"></i></a>
+            <a href=""></a>
+        </div>
+    </footer>
+
+
+    <!-- Como llamar iconos de la librería de fontawesome, se puede hacer de la siguiente manera: -->
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-solid fa-bell"></i>
+    <i class="fa-regular fa-calendar"></i>
+    <i class="fa-brands fa-github"></i>
+
 
     <script src="./js/carrusel.js"></script>
 

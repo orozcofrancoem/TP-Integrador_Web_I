@@ -1,22 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-</head>
-
-<body>
+<section id="contacto">
     <header>
-        <nav>
-            <ul>
-                <li> <a href="./index.html">Inicio</a></li>
-                <li> <a href="./contacto.html">Contacto</a></li>
-                <li> <a href="./producto.html">Productos</a></li>
-            </ul>
-        </nav>
+        <H2>CONTÁCTANOS</H2>
+        <p>Ponte en contacto con nosotros</p>
     </header>
-</body>
 
-</html>
+    <form action="GET">
+        <div>
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="nombre" placeholder="Ej. Franco Orozco">
+        </div>
+
+        <div>
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required>
+        </div>
+
+        <div>
+            <label for="numero">Teléfono</label>
+            <input type="number" id="numero" name="numero" placeholder="2664840848" required>
+        </div>
+
+        <div>
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Consulta">
+        </div>
+
+        <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Ingrese su mensaje..." rows="6" required>
+            </textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
