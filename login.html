@@ -1,30 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Re Piola Games</title>
-</head>
-<body>
+<section id="login">
     <header>
-        <div>
-            <a href="./index.html">
-                <span>Re Piola Games</span>
-            </a>
-        </div>
+        <h2>Iniciar Sesión</h2>
+        <p>Accede a tu cuenta para disfrutar de todas las funciones</p>
     </header>
 
-    <main>
-        <h1>Iniciar Sesión</h1>
-        <form action="./procesar_login.html" method="post">
-            <label for="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" required>
+    <form action="procesar_login.php" method="POST">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
 
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
 
-            <button type="submit">Iniciar Sesión</button>
-        </form>
-    </main>
-</body>
-</html>
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <p>¿No tienes una cuenta? <a href="./registro.html">Regístrate aquí</a></p>
