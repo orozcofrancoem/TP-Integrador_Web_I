@@ -3,7 +3,8 @@
     --bg-main: #0b0c10;
     --bg-header: #121318;
     --bg-card: #161821;
-    --color-primary: #a855f7; /* Violeta gamer */
+    --color-primary: #a855f7;
+    /* Violeta gamer */
     --color-primary-hover: #9333ea;
     --color-text: #f3f4f6;
     --color-text-muted: #9ca3af;
@@ -29,6 +30,7 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 /* LOGO */
 .logo a {
     display: flex;
@@ -89,6 +91,7 @@ nav ul li a {
     text-decoration: none;
 
 }
+
 /* INPUT DE BUSQUEDA */
 .buscador input {
     background: transparent;
@@ -138,10 +141,8 @@ nav ul li a {
     object-fit: cover;
     border: 2px solid var(--color-primary);
 }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* CONTENIDO PRINCIPAL Y HERO */
 
 main {
@@ -153,12 +154,32 @@ main {
 }
 
 #hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    position: relative;
+    width: 100vw;
+    /* altura grande, tipo pantalla completa */
+    min-height: 85vh;
+    display: flex;
+    box-sizing: border-box;
     align-items: center;
-    padding: 3rem 0;
+    justify-content: space-between;
+    /* margen interno para que el texto no pegue al borde izquierdo */
+    padding: 0 3rem;
+    overflow: hidden;
+    /* estilo del carrusel de fondo */
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* capa semitransparente para leer texto */
+    background-color: rgba(11, 12, 16, 0.55);
+    background-blend-mode: darken;
+    margin-left: calc(-50vw+50%);
+    margin-right: calc(-50vw+50%);
+    max-width: 100%;
+    /* gap: 4rem; */
 }
+
 
 .hero-texto h1 {
     font-size: 3.2rem;
@@ -213,12 +234,14 @@ main {
     background-color: #1f2230;
     border-color: var(--color-text-muted);
 }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* CARRUSEL */
 
 .contenedor-carrusel {
     width: 100%;
+    max-width: 100%;
+    border-radius: 0;
 }
 
 .contenedor-imagenes {
@@ -311,8 +334,8 @@ main {
 #juegos-populares header a:hover {
     opacity: 0.8;
 }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* FOOTER */
 
 footer {
@@ -356,7 +379,7 @@ footer {
 }
 
 /* Ocultar iconos sueltos de prueba al final del body si no se usan */
-body > i {
+body>i {
     display: none;
 }
 
@@ -395,4 +418,3 @@ body > i {
         text-align: center;
     }
 }
-
