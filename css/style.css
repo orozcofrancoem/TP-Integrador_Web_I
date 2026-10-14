@@ -11,11 +11,13 @@
     --border-color: #2a2e3d;
 }
 
+
 /* HEADER / NAVEGACIÓN */
 
 /* TIPOGRAFIA */
 body {
     font-family: 'Verdana', Tahoma, sans-serif;
+    margin: 0%;
 }
 
 header {
@@ -157,13 +159,11 @@ main {
     position: relative;
     width: 100vw;
     /* altura grande, tipo pantalla completa */
-    min-height: 85vh;
-    display: flex;
+    min-height: 85vh; 
     box-sizing: border-box;
     align-items: center;
-    justify-content: space-between;
     /* margen interno para que el texto no pegue al borde izquierdo */
-    padding: 0 3rem;
+    padding: 0 0;
     overflow: hidden;
     /* estilo del carrusel de fondo */
     overflow: hidden;
@@ -174,18 +174,24 @@ main {
     /* capa semitransparente para leer texto */
     background-color: rgba(11, 12, 16, 0.55);
     background-blend-mode: darken;
-    margin-left: calc(-50vw+50%);
-    margin-right: calc(-50vw+50%);
     max-width: 100%;
-    /* gap: 4rem; */
 }
 
+.hero-texto{
+    position: absolute;
+    z-index: 10;
 
+}
 .hero-texto h1 {
     font-size: 3.2rem;
     line-height: 1.1;
     font-weight: 800;
     margin-bottom: 1.2rem;
+     z-index: 10;
+     top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
 }
 
 .hero-texto h1 span {
@@ -239,9 +245,13 @@ main {
 /* CARRUSEL */
 
 .contenedor-carrusel {
-    width: 100%;
+    position: absolute;
+    width: 100vw;
     max-width: 100%;
-    border-radius: 0;
+    height: 100%;
+    min-height: 85vh;
+    height: 100%!important;
+    
 }
 
 .contenedor-imagenes {
@@ -251,7 +261,6 @@ main {
     justify-content: center;
     background-color: #121318;
     border: 1px solid var(--border-color);
-    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     height: 380px;
