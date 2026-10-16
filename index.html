@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-principal">
         <!-- LOGO -->
         <div class="logo">
             <a href="./index.html">
@@ -36,14 +36,17 @@
         <!--  BUSCADOR   -->
         <form class="buscador">
             <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos...">
-            <button type="submit">🔍</button>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <!-- fa-solid fa-magnifying-glass es la lupita -->
         </form>
 
         <!--  NOTIFICACIONES   -->
         <div class="usuario-panel">
-            <button type="button">🔔</button>
-            <a href="./login.html">
-                <img src="img/usuario.jpg" alt="Perfil de Usuario">
+            <!-- aria-label sirve para darle un nombre "accesible" a un elemento.
+             con esto, las tecnologías de asistencia pueden definir qué representa el botón -->
+            <button type="button" aria-label="notificaciones"><i class="fa-solid fa-bell"></i></button>
+            <a href="./login.html" aria-label="perfil de usuario">
+                <i class="fa-solid fa-user"></i>
             </a>
         </div>
     </header>
@@ -60,41 +63,55 @@
                     gamer.
                 </p>
                 <div class="hero-botones">
-                    <a href="./contacto.html" class="btn">Unirme ahora</a>
-                    <a href="./juegos.html" class="btn-secundario">Explorar Juegos</a>
+                    <a href="./contacto.html" class="btn btn-primario">Unirme ahora</a>
+                    <a href="./juegos.html" class="btn btn-secundario">Explorar Juegos</a>
                 </div>
             </div>
 
             <!-------------  Imagen principal --------- -->
+            <div class="contenedor-carrusel">
 
-            <section class="contenedor-carrusel">
+                <!-- botón retroceder -->
+                <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-                <div class="contenedor-imagenes">
-                    <!-- botón retroceder -->
-                    <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-
-                    <!-- imagen dinámica que cambiará con JS -->
-                    <div class="carrusel-slide">
-                        <img src="./img/01.png" alt="Imagen en carrusel" id="img-carrusel">
-                    </div>
-
-                    <!-- botón avanzar -->
-                    <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
+                <!-- imagen dinámica que cambiará con JS -->
+                <div class="carrusel-slide">
+                    <img src="./img/01.png" alt="Imagen en carrusel" id="img-carrusel">
                 </div>
-            </section>
 
+                <!-- botón avanzar -->
+                <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
         </section>
 
         <!-------------  Juegos Populares --------- -->
         <section id="juegos-populares">
-            <header>
-                <h2>Lo mas popular</h2>
-                <a href="./juegos.html">Ver todos <i class="fa-solid fa-arrow-right"></i> </a>
-            </header>
+            <div class="populares-header">
+                <h2>Lo más popular</h2>
+                <a href="./juegos.html" class="ver-todos">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid-juegos">
+                <article class="card-juego">
+                    <img src="./img/AnimalCrossing.webp" alt="animal crossing">
+                    <h3>Animal Crossing</h3>
+                </article>
+
+                <article class="card-juego">
+                    <img src="./img/CallOfDuty.webp" alt="call of duty">
+                    <h3>Call of Duty</h3>
+                </article>
+
+                <article class="card-juego">
+                    <img src="./img/FinalFantasy.webp" alt="final fantasy">
+                    <h3>Final Fantasy</h3>
+                </article>
+            </div>
+
         </section>
 
     </main>
@@ -103,15 +120,15 @@
         <div class="footer-info">
             <h2>¿Quiénes somos?</h2>
             <p>
-                Somos un grupo de estudiantes realizando una página web sobre
-                videojuegos. Aún en desarrollo... Este contenido mejorará.
+                Somos un grupo de estudiantes realizando una página web sobre videojuegos para el Trabajo Final
+                Integrador.
             </p>
         </div>
 
         <div class="footer-redes">
-            <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" aria-label="GitHub"> <i
-                    class="fa-brands fa-github"></i></a>
-            <a href=""></a>
+            <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank"
+                aria-label="GitHub de la materia">GitHub <i class="fa-brands fa-github"></i>
+            </a>
         </div>
     </footer>
 

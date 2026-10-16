@@ -1,4 +1,10 @@
-/* VARIABLES DE ESTILO */
+* {
+    margin: 0;
+    padding: 0;
+    /* asegura que el padding no agrande el tamaño total de las cajas */
+    box-sizing: border-box;
+}
+
 :root {
     --bg-main: #0b0c10;
     --bg-header: #121318;
@@ -11,419 +17,89 @@
     --border-color: #2a2e3d;
 }
 
-
-/* HEADER / NAVEGACIÓN */
-
-/* TIPOGRAFIA */
-body {
-    font-family: 'Verdana', Tahoma, sans-serif;
-    margin: 0%;
+#juegos-populares {
+    padding: 60px 40px;
 }
 
-header {
-    background-color: var(--bg-header);
-    border-bottom: 1px solid var(--border-color);
+.populares-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
-    height: 70px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-/* LOGO */
-.logo a {
+.ver-todos {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #fff;
-    text-decoration: none;
 }
 
-/* NAVEGACIÓN */
-nav ul {
+.ver-todos:hover {
+    color: var(--color-primary-hover);
+}
+
+.grid-juegos {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-/* ENLACES */
-nav ul li a {
-    color: var(--color-text-muted);
-    font-size: 0.95rem;
-    transition: color 0.2s;
-    padding: 6px 12px;
-    border-radius: 20px;
-}
-
-/* HOVER Y ACTIVO */
-nav ul li a:hover,
-nav ul li a.activo {
-    color: #fff;
-    background-color: #a855f726;
-}
-
-/* ENLACE ACTIVO */
-nav ul li a.activo {
-    color: var(--color-primary);
-    border: 1px solid #a855f74d;
-}
-
-/* PANEL DE BUSQUEDA */
-.buscador {
-    display: flex;
-    align-items: center;
-    background-color: #1a1c26;
+.card-juego {
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 30px;
-    padding: 4px 12px;
-    width: 240px;
-}
-
-/* QUITAR PUNTO LInK */
-nav ul {
-    list-style: none;
-}
-
-/* QUITAR SUBRAYADO DE ENLACES */
-nav ul li a {
-    text-decoration: none;
-
-}
-
-/* INPUT DE BUSQUEDA */
-.buscador input {
-    background: transparent;
-    border: none;
-    color: var(--color-text);
-    outline: none;
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 4px;
-}
-
-/* PLACEHOLDER */
-.buscador input::placeholder {
-    color: var(--color-text-muted);
-}
-
-/* BOTÓN DE BUSQUEDA */
-.buscador button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-/* PANEL DE USUARIO */
-.usuario-panel {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* BOTÓN DE USUARIO */
-.usuario-panel button {
-    background: transparent;
-    border: none;
-    color: var(--color-text);
-    font-size: 1.1rem;
-    cursor: pointer;
-    position: relative;
-}
-
-/* IMAGEN DE USUARIO */
-.usuario-panel img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--color-primary);
-}
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-/* CONTENIDO PRINCIPAL Y HERO */
-
-main {
-    flex: 1;
-    max-width: 1300px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 2rem;
-}
-
-#hero {
-    position: relative;
-    width: 100vw;
-    /* altura grande, tipo pantalla completa */
-    min-height: 85vh; 
-    box-sizing: border-box;
-    align-items: center;
-    /* margen interno para que el texto no pegue al borde izquierdo */
-    padding: 0 0;
-    overflow: hidden;
-    /* estilo del carrusel de fondo */
-    overflow: hidden;
-    border-radius: 0 0 20px 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* capa semitransparente para leer texto */
-    background-color: rgba(11, 12, 16, 0.55);
-    background-blend-mode: darken;
-    max-width: 100%;
-}
-
-.hero-texto{
-    position: absolute;
-    z-index: 10;
-
-}
-.hero-texto h1 {
-    font-size: 3.2rem;
-    line-height: 1.1;
-    font-weight: 800;
-    margin-bottom: 1.2rem;
-     z-index: 10;
-     top: 50%;
-    right: 50%;
-    bottom: 50%;
-    left: 50%;
-}
-
-.hero-texto h1 span {
-    color: var(--color-primary);
-    display: block;
-}
-
-.hero-texto p {
-    color: var(--color-text-muted);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-}
-
-.hero-botones {
-    display: flex;
-    gap: 1rem;
-}
-
-.btn {
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 0.8rem 1.8rem;
     border-radius: 12px;
-    font-weight: 600;
-    transition: background-color 0.2s, transform 0.1s;
-    box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4);
-}
-
-.btn:hover {
-    background-color: var(--color-primary-hover);
-    transform: translateY(-2px);
-}
-
-.btn-secundario {
-    background-color: #161821;
-    color: #fff;
-    border: 1px solid var(--border-color);
-    padding: 0.8rem 1.8rem;
-    border-radius: 12px;
-    font-weight: 600;
-    transition: background-color 0.2s, border-color 0.2s;
-}
-
-.btn-secundario:hover {
-    background-color: #1f2230;
-    border-color: var(--color-text-muted);
-}
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-/* CARRUSEL */
-
-.contenedor-carrusel {
-    position: absolute;
-    width: 100vw;
-    max-width: 100%;
-    height: 100%;
-    min-height: 85vh;
-    height: 100%!important;
-    
-}
-
-.contenedor-imagenes {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121318;
-    border: 1px solid var(--border-color);
+    /* evita que la imagen sobrasalga del borde redondeado */
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    height: 380px;
-}
-
-.carrusel-slide {
-    width: 100%;
-    height: 100%;
-}
-
-.carrusel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.carrusel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: 1px solid var(--border-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    /* crece, se achica y tiene un ancho base de 220px */
+    flex: 1 1 220px;
+    max-width: 280px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    transition: background-color 0.2s;
 }
 
-.carrusel-btn:hover {
-    background-color: var(--color-primary);
+.card-juego:hover {
+    /* levanta levemente la tarjeta al poner el mouse encima */
+    transform: translateY(-5px);
     border-color: var(--color-primary);
 }
 
-#btn-ant {
-    left: 15px;
+.card-juego img {
+    width: 100%;
+    height: 180px;
+    /* mantiene la proporción de la imagen sin deformarla */
+    object-fit: cover;
 }
 
-#btn-sig {
-    right: 15px;
+.card-juego h3 {
+    padding: 5px;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    text-align: center;
 }
 
-/* JUEGOS POPULARES */
-
-#juegos-populares {
-    margin-top: 4rem;
-}
-
-#juegos-populares header {
-    background: transparent;
-    border: none;
-    padding: 0;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-#juegos-populares h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-#juegos-populares header a {
-    color: var(--color-primary);
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.95rem;
-    transition: opacity 0.2s;
-}
-
-#juegos-populares header a:hover {
-    opacity: 0.8;
-}
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* FOOTER */
 
 footer {
     background-color: var(--bg-header);
     border-top: 1px solid var(--border-color);
-    padding: 3rem 2rem;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
+    margin-top: 40px;
 }
 
 .footer-info h2 {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
 }
 
 .footer-info p {
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     max-width: 500px;
-}
-
-.footer-redes a {
-    background-color: #1a1c26;
-    border: 1px solid var(--border-color);
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: background-color 0.2s, border-color 0.2s;
-}
-
-.footer-redes a:hover {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-}
-
-/* Ocultar iconos sueltos de prueba al final del body si no se usan */
-body>i {
-    display: none;
-}
-
-/* DISEÑO RESPONSIVE */
-
-@media (max-width: 968px) {
-    header {
-        padding: 0 1rem;
-        flex-wrap: wrap;
-        height: auto;
-        gap: 10px;
-    }
-
-    nav ul {
-        gap: 1rem;
-        overflow-x: auto;
-        padding-bottom: 5px;
-    }
-
-    .buscador {
-        display: none;
-    }
-
-    #hero {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .hero-texto h1 {
-        font-size: 2.5rem;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
 }
