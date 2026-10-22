@@ -91,7 +91,6 @@ nav ul {
 /* QUITAR SUBRAYADO DE ENLACES */
 nav ul li a {
     text-decoration: none;
-
 }
 
 /* INPUT DE BUSQUEDA */
@@ -135,14 +134,14 @@ nav ul li a {
     position: relative;
 }
 
-/* IMAGEN DE USUARIO */
+/* IMAGEN DE USUARIO
 .usuario-panel img {
     width: 38px;
     height: 38px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--color-primary);
-}
+} */
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* CONTENIDO PRINCIPAL Y HERO */
@@ -332,7 +331,9 @@ main {
 /* JUEGOS POPULARES */
 
 #juegos-populares {
-    margin-top: 4rem;
+    margin-top: 2rem;
+    padding: 3rem 4rem;
+    background-color: var(--bg-main);
 }
 
 #juegos-populares header {
@@ -343,12 +344,13 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 #juegos-populares h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
+    color: var(--color-text);
 }
 
 #juegos-populares header a {
@@ -356,14 +358,55 @@ main {
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 0.95rem;
-    transition: opacity 0.2s;
+    gap: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s
 }
 
 #juegos-populares header a:hover {
     opacity: 0.8;
 }
+
+.grid-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.card-juego {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    flex: 1 1 260px;
+    max-width: 320px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-juego:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2);
+}
+
+.card-juego img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-juego h3 {
+    padding: 18px;
+    font-size: 1.15rem;
+    color: var(--color-text);
+    text-align: center;
+}
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* FOOTER */
