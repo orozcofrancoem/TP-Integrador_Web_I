@@ -387,11 +387,11 @@ main {
     cursor: pointer;
 }
 
-/* .card-juego:hover {
+.card-juego:hover {
     transform: translateY(-8px);
     border-color: var(--color-primary);
     box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2);
-} */
+}
 
 .card-juego img {
     width: 100%;

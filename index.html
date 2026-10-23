@@ -43,62 +43,77 @@
         <div class="usuario-panel">
             <button type="button">🔔</button>
             <a href="./login.html">
-                <img src="img/usuario.jpg" alt="Perfil de Usuario">
+                <i class="fa-solid fa-circle-user"></i>
             </a>
         </div>
     </header>
 
     <!-------------  CONTENIDO PRINCIPAL --------- -->
-    <main id="contenido-principal">
+    <main>
         <!-----  HERO  ----->
         <section id="hero">
+            <img src="./img/01.png" alt="Imagen en carrusel" id="img-carrusel" class="carrusel-fondo">
+
+            <div class="overlay-hero"></div>
+
             <div class="hero-texto">
                 <h1>Tu mundo gamer <span>en un solo lugar</span> </h1>
                 <p>
-                    Bienvenido a Re Piola Games, tu destino definitivo
-                    para todo lo relacionado con videojuegos. Explora
-                    nuestras últimas noticias, descubre nuevos juegos 
-                    y mantente al día con las tendencias del mundo
+                    Bienvenido a Re Piola Games, tu destino definitivo para todo lo relacionado con videojuegos. Explora
+                    nuestras últimas noticias, descubre nuevos juegos y mantente al día con las tendencias del mundo
                     gamer.
                 </p>
+
                 <div class="hero-botones">
                     <a href="./contacto.html" class="btn">Unirme ahora</a>
                     <a href="./juegos.html" class="btn-secundario">Explorar Juegos</a>
                 </div>
             </div>
 
-            <!-------------  Imagen principal --------- -->
+            <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
 
-            <section class="contenedor-carrusel">
-
-                <div class="contenedor-imagenes">
-                    <!-- botón retroceder -->
-                    <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-
-                    <!-- imagen dinámica que cambiará con JS
-                    <div class="carrusel-slide">
-                        <img src="./img/01.png" alt="Imagen en carrusel" id="img-carrusel">
-                    </div> -->
-
-                    <!-- botón avanzar -->
-                    <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                </div>
-            </section>
-
+            <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </section>
 
         <!-------------  Juegos Populares --------- -->
         <section id="juegos-populares">
-            <div class="cartas-juego">
+            <header>
                 <h2>Lo mas popular</h2>
                 <a href="./juegos.html">Ver todos <i class="fa-solid fa-arrow-right"></i> </a>
+            </header>
+
+            <!-- CONTENEDOR FLEXBOX PARA LAS TARJETAS -->
+            <div class="grid-juegos">
+                <article class="card-juego">
+                    <img src="./img/FC-27.avif" alt="FC-27">
+                    <h3>FC 27</h3>
+                </article>
+
+                <article class="card-juego">
+                    <img src="./img/CallOfDuty.webp" alt="Call of Duty">
+                    <h3>Call of Duty</h3>
+                </article>
+
+                <article class="card-juego">
+                    <img src="./img/Fornite.webp" alt="Fornite">
+                    <h3>Fornite</h3>
+                </article>
+
+                <article class="card-juego">
+                    <img src="./img/ForzaHorizon.webp" alt="Forza Horizon">
+                    <h3>Forza Horizon</h3>
+                </article>
+
+                <article class="card-juego">
+                    <img src="./img/GtaV.webp" alt="GTA V">
+                    <h3>GTA V</h3>
+                </article>
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -113,7 +128,6 @@
         <div class="footer-redes">
             <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" aria-label="GitHub"> <i
                     class="fa-brands fa-github"></i></a>
-            <a href=""></a>
         </div>
     </footer>
 
