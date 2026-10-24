@@ -4,7 +4,7 @@
     background-color: var(--color-primary);
     color: #fff;
     padding: 0.9rem 2.2rem;
-    border-radius: 30px;
+    border-radius: 12px;
     font-weight: 700;
     text-decoration: none;
     transition: background-color 0.2s, transform 0.2s;
@@ -23,7 +23,7 @@
     color: #fff;
     border: 1px solid var(--border-color);
     padding: 0.9rem 2.2rem;
-    border-radius: 30px;
+    border-radius: 12px;
     font-weight: 700;
     text-decoration: none;
     transition: background-color 0.2s, border-color 0.2s;

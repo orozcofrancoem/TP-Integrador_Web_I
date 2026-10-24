@@ -83,11 +83,13 @@ main.inicio {
     font-size: 1.05rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+    max-width: 460px;
 }
 
 .hero-botones {
     display: flex;
-    gap: 1.2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* ===== 4. FLECHAS DEL CARRUSEL ===== */
