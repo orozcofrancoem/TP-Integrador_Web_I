@@ -1,17 +1,92 @@
-<section id="login">
-    <header>
-        <h2>Iniciar Sesión</h2>
-        <p>Accede a tu cuenta para disfrutar de todas las funciones</p>
-    </header>
+<!DOCTYPE html>
+<html lang="es">
 
-    <form action="procesar_login.php" method="POST">
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Re Piola Games</title>
 
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        <button type="submit">Iniciar Sesión</button>
-    </form>
+    <!-- Estilos generales y compartidos -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/componentes.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
 
-    <p>¿No tienes una cuenta? <a href="./registro.html">Regístrate aquí</a></p>
+<body>
+
+    <!-- ===== 1. CABECERA ===== -->
+
+    <div id="cabecera-sitio"></div>
+
+    <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
+
+    <main>
+
+        <section id="login">
+
+            <!-- ===== 2.1. PRESENTACIÓN ===== -->
+
+            <header class="login-presentacion">
+                <h1>Iniciar sesión</h1>
+                <p>
+                    Accede a tu cuenta para disfrutar de todas las funciones
+                </p>
+            </header>
+
+            <!-- ===== 2.2. FORMULARIO DE ACCESO ===== -->
+
+            <form action="procesar_login.php" method="POST">
+
+                <!-- Usuario -->
+                <div class="campo-grupo">
+                    <label for="usuario">Usuario:</label>
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Nombre de usuario"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <!-- Contraseña -->
+                <div class="campo-grupo">
+                    <label for="contrasena">Contraseña:</label>
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <!-- Envío del formulario -->
+                <button type="submit" class="btn">Iniciar sesión</button>
+
+            </form>
+
+            <!-- ===== 2.3. ACCESO AL REGISTRO ===== -->
+
+            <p>
+                ¿No tienes una cuenta?
+                <a href="./registro.html">Regístrate aquí</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
+
+    <div id="pie-sitio"></div>
+    <script src="./js/componentes.js"></script>
+</body>
+
+</html>

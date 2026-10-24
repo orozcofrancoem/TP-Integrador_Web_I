@@ -8,6 +8,11 @@
     justify-content: space-between;
     padding: 0 2rem;
     height: 70px;
+}
+
+/* ===== POSICIÓN DE LA CABECERA COMPARTIDA ===== */
+
+#cabecera-sitio {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -116,7 +121,7 @@ nav ul li a.activo {
         height: auto;
         gap: 10px;
     }
-
+   
     nav ul {
         gap: 1rem;
         overflow-x: auto;

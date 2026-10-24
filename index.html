@@ -5,73 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Re Piola Games</title>
+
+    <!-- Iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Estilos generales y compartidos -->
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/componentes.css">
+
+    <!-- Estilos del inicio y pie de página -->
     <link rel="stylesheet" href="./css/inicio.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <!-- Librería de iconos de fontawesome -->
 </head>
 
 <body>
-    <header class="header-principal">
-        <!-- LOGO -->
-        <div class="logo">
-            <a href="./index.html">
-                <span>🎮</span>
-                <span>Re Piola Games</span>
-                <span>🎮</span>
-            </a>
-        </div>
 
-        <!--  NAVEGACIÓN PRINCIPAL   -->
-        <nav>
-            <ul>
-                <li> <a href="./index.html" class="activo">Inicio</a></li>
-                <li> <a href="./contacto.html">Contacto</a></li>
-                <li> <a href="./juegos.html">Juegos</a></li>
-                <li> <a href="./perfil.html">Perfil</a></li>
-                <li> <a href="./login.html">Login</a></li>
-                <li> <a href="./noticias.html">Noticias</a></li>
-            </ul>
-        </nav>
+    <!-- ===== 1. CABECERA ===== -->
 
-        <!--  BUSCADOR   -->
-        <form class="buscador">
-            <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos...">
-            <button type="submit">🔍</button>
-        </form>
+    <div id="cabecera-sitio"></div>
 
-        <!--  NOTIFICACIONES   -->
-        <div class="usuario-panel">
-            <button type="button">🔔</button>
-            <a href="./login.html">
-                <i class="fa-solid fa-circle-user"></i>
-            </a>
-        </div>
-    </header>
+    <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
 
-    <!-------------  CONTENIDO PRINCIPAL --------- -->
     <main class="inicio">
-        <!-----  HERO  ----->
-        <section id="hero">
-            <img src="./img/01.png" alt="Imagen en carrusel" id="img-carrusel" class="carrusel-fondo">
 
+        <!-- ===== 2.1. PORTADA Y CARRUSEL ===== -->
+
+        <section id="hero">
+
+            <!-- Imagen que actualiza carrusel.js -->
+            <img
+                src="./img/01.png"
+                alt="Imagen en carrusel"
+                id="img-carrusel"
+                class="carrusel-fondo"
+            >
+
+            <!-- Degradado sobre la imagen -->
             <div class="overlay-hero"></div>
 
+            <!-- Presentación y enlaces -->
             <div class="hero-texto">
-                <h1>Tu mundo gamer <span>en un solo lugar</span> </h1>
+                <h1>
+                    Tu mundo gamer
+                    <span>en un solo lugar</span>
+                </h1>
+
                 <p>
                     Descubrí nuevos juegos, compartí tu pasión y viví
                     la experiencia gamer en un solo lugar.
                 </p>
+
                 <div class="hero-botones">
                     <a href="./contacto.html" class="btn">Unirme ahora</a>
-                    <a href="./juegos.html" class="btn-secundario">Explorar Juegos</a>
+                    <a href="./juegos.html" class="btn-secundario">
+                        Explorar Juegos
+                    </a>
                 </div>
             </div>
 
+            <!-- Controles del carrusel -->
             <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
@@ -79,17 +72,25 @@
             <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
+
         </section>
 
-        <!-------------  Juegos Populares --------- -->
+        <!-- ===== 2.2. JUEGOS POPULARES ===== -->
+
         <section id="juegos-populares">
+
+            <!-- Título y enlace al catálogo -->
             <header>
-                <h2>Lo mas popular</h2>
-                <a href="./juegos.html">Ver todos <i class="fa-solid fa-arrow-right"></i> </a>
+                <h2>Lo más popular</h2>
+                <a href="./juegos.html">
+                    Ver todos
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </header>
 
-            <!-- CONTENEDOR FLEXBOX PARA LAS TARJETAS -->
+            <!-- Tarjetas organizadas con Flexbox -->
             <div class="grid-juegos">
+
                 <article class="card-juego">
                     <img src="./img/FC-27.avif" alt="FC-27">
                     <h3>FC 27</h3>
@@ -101,8 +102,8 @@
                 </article>
 
                 <article class="card-juego">
-                    <img src="./img/Fornite.webp" alt="Fornite">
-                    <h3>Fornite</h3>
+                    <img src="./img/Fornite.webp" alt="Fortnite">
+                    <h3>Fortnite</h3>
                 </article>
 
                 <article class="card-juego">
@@ -114,33 +115,21 @@
                     <img src="./img/GtaV.webp" alt="GTA V">
                     <h3>GTA V</h3>
                 </article>
+
             </div>
+
         </section>
+
     </main>
 
-    <footer>
-        <div class="footer-info">
-            <h2>¿Quiénes somos?</h2>
-            <p>
-                Somos un grupo de estudiantes realizando una página web sobre
-                videojuegos. Aún en desarrollo... Este contenido mejorará.
-            </p>
-        </div>
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
 
-        <div class="footer-redes">
-            <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" aria-label="GitHub"> <i
-                    class="fa-brands fa-github"></i></a>
-        </div>
-    </footer>
+    <div id="pie-sitio"></div>
 
-    <!-- Como llamar iconos de la librería de fontawesome, se puede hacer de la siguiente manera:
-    <i class="fa-solid fa-user"></i>
-    <i class="fa-solid fa-bell"></i>
-    <i class="fa-regular fa-calendar"></i>
-    <i class="fa-brands fa-github"></i> -->
+    <!-- ===== 4. JAVASCRIPT ===== -->
 
     <script src="./js/carrusel.js"></script>
-
+    <script src="./js/componentes.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contacto | Re Piola Games</title>
+
+    <!-- Iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Estilos generales y compartidos -->
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/componentes.css">
@@ -13,110 +17,116 @@
 </head>
 
 <body>
-    <header class="header-principal">
-        <!-- LOGO -->
-        <div class="logo">
-            <a href="./index.html">
-                <span>🎮</span>
-                <span>Re Piola Games</span>
-                <span>🎮</span>
-            </a>
-        </div>
 
-        <!--  NAVEGACIÓN PRINCIPAL   -->
-        <nav>
-            <ul>
-                <li> <a href="./index.html">Inicio</a></li>
-                <li> <a href="./contacto.html" class="activo">Contacto</a></li>
-                <li> <a href="./juegos.html">Juegos</a></li>
-                <li> <a href="./perfil.html">Perfil</a></li>
-                <li> <a href="./login.html">Login</a></li>
-                <li> <a href="./noticias.html">Noticias</a></li>
-            </ul>
-        </nav>
+    <!-- ===== 1. CABECERA ===== -->
 
-        <!--  BUSCADOR   -->
-        <form class="buscador">
-            <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos...">
-            <button type="submit">🔍</button>
-        </form>
+    <div id="cabecera-sitio"></div>
 
-        <!--  NOTIFICACIONES   -->
-        <div class="usuario-panel">
-            <button type="button">🔔</button>
-            <a href="./login.html" aria-label="perfil de usuario">
-                <i class="fa-solid fa-circle-user"></i>
-            </a>
-        </div>
-    </header>
+    <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
+
     <main>
+
         <section id="contacto">
+
+            <!-- ===== 2.1. PRESENTACIÓN ===== -->
+
             <div class="contacto-header">
-                <H1>CONTACTATE CON NOSOTROS</H1>
-                <p>¿Tienes consultas o sugerencias? Escribinos y te responderemos a la brevedad</p>
+                <h1>CONTACTATE CON NOSOTROS</h1>
+                <p>
+                    ¿Tienes consultas o sugerencias?
+                    Escribinos y te responderemos a la brevedad
+                </p>
             </div>
 
+            <!-- ===== 2.2. FORMULARIO DE CONTACTO ===== -->
+
             <div class="contenedor-formulario">
+
                 <form id="form-contacto" novalidate>
+
+                    <!-- Nombre completo -->
                     <div class="campo-grupo">
                         <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Franco Orozco">
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ej. Franco Orozco"
+                        >
                         <span class="error-msg" id="error-nombre"></span>
                     </div>
 
+                    <!-- Correo electrónico -->
                     <div class="campo-grupo">
                         <label for="email">Correo Electrónico *</label>
-                        <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="ejemplo@gmail.com"
+                        >
                         <span class="error-msg" id="error-email"></span>
                     </div>
 
+                    <!-- Teléfono -->
                     <div class="campo-grupo">
                         <label for="telefono">Teléfono *</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="ej. 2664840848">
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="ej. 2664840848"
+                        >
                         <span class="error-msg" id="error-telefono"></span>
                     </div>
 
+                    <!-- Asunto -->
                     <div class="campo-grupo">
                         <label for="asunto">Asunto *</label>
-                        <input type="text" id="asunto" name="asunto" placeholder="Ej. Consulta sobre juegos">
+                        <input
+                            type="text"
+                            id="asunto"
+                            name="asunto"
+                            placeholder="Ej. Consulta sobre juegos"
+                        >
                         <span class="error-msg" id="error-asunto"></span>
                     </div>
 
+                    <!-- Mensaje -->
                     <div class="campo-grupo">
                         <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje aquí..."
-                            rows="5"></textarea>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            placeholder="Ingrese su mensaje aquí..."
+                            rows="5"
+                        ></textarea>
                         <span class="error-msg" id="error-mensaje"></span>
                     </div>
 
+                    <!-- Envío del formulario -->
                     <button type="submit" class="btn">Enviar</button>
 
                 </form>
+
+                <!-- ===== 2.3. RESUMEN DEL FORMULARIO ===== -->
 
                 <div id="resumen-envio"></div>
 
             </div>
 
         </section>
+
     </main>
 
-    <footer>
-        <div class="footer-info">
-            <h2>¿Quiénes somos?</h2>
-            <p>
-                Somos un grupo de estudiantes realizando una página web sobre
-                videojuegos. Aún en desarrollo... Este contenido mejorará.
-            </p>
-        </div>
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
 
-        <div class="footer-redes">
-            <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" aria-label="GitHub"> <i
-                    class="fa-brands fa-github"></i></a>
-        </div>
-    </footer>
+    <div id="pie-sitio"></div>
+
+    <!-- ===== 4. JAVASCRIPT ===== -->
 
     <script src="./js/contacto.js"></script>
-
+    <script src="./js/componentes.js"></script>
 </body>
 
 </html>

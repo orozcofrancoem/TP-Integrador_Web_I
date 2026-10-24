@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos</title>
+    <title>Juegos | Re Piola Games</title>
+
+    <!-- Iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Estilos generales y compartidos -->
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/componentes.css">
@@ -13,147 +17,157 @@
 </head>
 
 <body>
-    <header class="header-principal">
-        <!-- LOGO -->
-        <div class="logo">
-            <a href="./index.html">
-                <span>🎮</span>
-                <span>Re Piola Games</span>
-                <span>🎮</span>
-            </a>
+
+    <!-- ===== 1. CABECERA ===== -->
+
+    <div id="cabecera-sitio"></div>
+
+    <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
+
+    <main>
+
+        <!-- ===== 2.1. PRESENTACIÓN ===== -->
+
+        <div class="juegos-presentacion">
+            <h1>Juegos</h1>
+            <p>Explora nuestra colección de juegos</p>
         </div>
 
-        <!--  NAVEGACIÓN PRINCIPAL   -->
-        <nav>
-            <ul>
-                <li> <a href="./index.html">Inicio</a></li>
-                <li> <a href="./contacto.html">Contacto</a></li>
-                <li> <a href="./juegos.html" class="activo">Juegos</a></li>
-                <li> <a href="./perfil.html">Perfil</a></li>
-                <li> <a href="./login.html">Login</a></li>
-                <li> <a href="./noticias.html">Noticias</a></li>
-            </ul>
-        </nav>
+        <section id="juegos" aria-label="Catálogo de juegos">
 
-        <!--  BUSCADOR   -->
-        <form class="buscador">
-            <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos...">
-            <button type="submit">🔍</button>
-        </form>
+            <!-- ===== 2.2. FILTROS POR CATEGORÍA ===== -->
 
-        <!--  NOTIFICACIONES   -->
-        <div class="usuario-panel">
-            <button type="button">🔔</button>
-            <a href="./login.html">
-                <i class="fa-solid fa-circle-user"></i>
-            </a>
-        </div>
-    </header>
+            <div class="juegos-filtros">
+                <button type="button">Todos</button>
+                <button type="button">Acción</button>
+                <button type="button">Aventura</button>
+                <button type="button">Deportes</button>
+                <button type="button">Estrategia</button>
+                <button type="button">RPG</button>
+            </div>
 
-    <h2>Juegos</h2>
-    <p>Explora nuestra colección de juegos</p>
-    <section id="juegos">
-        <!-- FILTROS -->
-        <div>
+            <!-- ===== 2.3. LISTA DE JUEGOS ===== -->
 
-            <button type="button">Todos</button>
-            <button type="button">Acción</button>
-            <button type="button">Aventura</button>
-            <button type="button">Deportes</button>
-            <button type="button">Estrategia</button>
-            <button type="button">RPG</button>
+            <div class="juegos-lista">
 
-        </div>
+                <article class="juego">
+                    <img src="img/Minecraft.webp" alt="Minecraft">
+                    <h3>Minecraft</h3>
+                    <p>Juego de construcción</p>
+                    <a href="https://www.minecraft.net/es-es/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-        <!-- LISTA DE JUEGOS -->
+                <article class="juego">
+                    <img src="img/FC-27.avif" alt="FIFA">
+                    <h3>FIFA</h3>
+                    <p>Juego de fútbol</p>
+                    <a href="https://www.ea.com/es-es/games/fifa/fifa-23" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-        <div>
-            <article>
-                <img src="img/Minecraft.webp" alt="Minecraft">
-                <h3>Minecraft</h3>
-                <p>Juego de construcción</p>
-                <a href="https://www.minecraft.net/es-es/" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/CallOfDuty.webp" alt="Call of Duty">
+                    <h3>Call of Duty</h3>
+                    <p>Juego de disparos en primera persona</p>
+                    <a href="https://www.callofduty.com/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/FC-27.avif" alt="FIFA">
-                <h3>FIFA</h3>
-                <p>Juego de fútbol</p>
-                <a href="https://www.ea.com/es-es/games/fifa/fifa-23" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/AssassinCreed.avif" alt="Assassin's Creed">
+                    <h3>Assassin's Creed</h3>
+                    <p>Juego de acción y aventura</p>
+                    <a href="https://www.ubisoft.com/es-es/game/assassins-creed" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/CallOfDuty.webp" alt="Call of Duty">
-                <h3>Call of Duty</h3>
-                <p>Juego de disparos en primera persona</p>
-                <a href="https://www.callofduty.com/" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/LOL.webp" alt="League of Legends">
+                    <h3>League of Legends</h3>
+                    <p>Juego de estrategia en línea</p>
+                    <a href="https://www.leagueoflegends.com/es-es/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/AssassinCreed.avif" alt="Assassin's Creed">
-                <h3>Assassin's Creed</h3>
-                <p>Juego de acción y aventura</p>
-                <a href="https://www.ubisoft.com/es-es/game/assassins-creed" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/TheWitcher.webp" alt="The Witcher">
+                    <h3>The Witcher</h3>
+                    <p>Juego de rol y fantasía</p>
+                    <a href="https://thewitcher.com/es" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/LOL.webp" alt="League of Legends">
-                <h3>League of Legends</h3>
-                <p>Juego de estrategia en línea</p>
-                <a href="https://www.leagueoflegends.com/es-es/" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/ForzaHorizon.webp" alt="Forza Horizon">
+                    <h3>Forza Horizon</h3>
+                    <p>Juego de carreras</p>
+                    <a href="https://forzamotorsport.net/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/TheWitcher.webp" alt="The Witcher">
-                <h3>The Witcher</h3>
-                <p>Juego de rol y fantasía</p>
-                <a href="https://thewitcher.com/es" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/FinalFantasy.webp" alt="Final Fantasy">
+                    <h3>Final Fantasy</h3>
+                    <p>Juego de rol y fantasía</p>
+                    <a href="https://finalfantasy.com/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/ForzaHorizon.webp" alt="Forza Horizon">
-                <h3>Forza Horizon</h3>
-                <p>Juego de carreras</p>
-                <a href="https://forzamotorsport.net/" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/Overwatch.webp" alt="Overwatch">
+                    <h3>Overwatch</h3>
+                    <p>Juego de disparos en equipo</p>
+                    <a href="https://playoverwatch.com/es-es/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/FinalFantasy.webp" alt="Final Fantasy">
-                <h3>Final Fantasy</h3>
-                <p>Juego de rol y fantasía</p>
-                <a href="https://finalfantasy.com/" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/AnimalCrossing.webp" alt="Animal Crossing">
+                    <h3>Animal Crossing</h3>
+                    <p>Juego de simulación social</p>
+                    <a href="https://animal-crossing.com/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/Overwatch.webp" alt="Overwatch">
-                <h3>Overwatch</h3>
-                <p>Juego de disparos en equipo</p>
-                <a href="https://playoverwatch.com/es-es/" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/ResidentEvil.webp" alt="Resident Evil">
+                    <h3>Resident Evil</h3>
+                    <p>Juego de terror y supervivencia</p>
+                    <a href="https://www.residentevil.com/" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/AnimalCrossing.webp" alt="Animal Crossing">
-                <h3>Animal Crossing</h3>
-                <p>Juego de simulación social</p>
-                <a href="https://animal-crossing.com/" target="_blank">Ver juego</a>
-            </article>
+                <article class="juego">
+                    <img src="img/CallofDutyWar.webp" alt="Call of Duty: Warzone">
+                    <h3>Call of Duty: Warzone</h3>
+                    <p>Juego de disparos en línea</p>
+                    <a href="https://www.callofduty.com/warzone" target="_blank">
+                        Ver juego
+                    </a>
+                </article>
 
-            <article>
-                <img src="img/ResidentEvil.webp" alt="Resident Evil">
-                <h3>Resident Evil</h3>
-                <p>Juego de terror y supervivencia</p>
-                <a href="https://www.residentevil.com/" target="_blank">Ver juego</a>
-            </article>
+            </div>
 
-            <article>
-                <img src="img/CallofDutyWar.webp" alt="Call of Duty: Warzone">
-                <h3>Call of Duty: Warzone</h3>
-                <p>Juego de disparos en línea</p>
-                <a href="https://www.callofduty.com/warzone" target="_blank">Ver juego</a>
-            </article>
+        </section>
 
-        </div>
-    </section>
+    </main>
+
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
+
+    <div id="pie-sitio"></div>
+    <script src="./js/componentes.js"></script>
 </body>
 
 </html>
