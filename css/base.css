@@ -1,0 +1,34 @@
+/* ===== 1. COLORES GENERALES ===== */
+
+:root {
+    --bg-main: #0b0c10;
+    --bg-header: #121318;
+    --bg-card: #161821;
+
+    --color-primary: #a855f7;
+    --color-primary-hover: #9333ea;
+
+    --color-text: #f3f4f6;
+    --color-text-muted: #9ca3af;
+
+    --border-color: #2a2e3d;
+}
+
+/* ===== 2. ESTILO GENERAL DE LA PÁGINA ===== */
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    background-color: var(--bg-main);
+    color: var(--color-text);
+}
+
+/* ===== 3. CONTENEDOR PRINCIPAL ===== */
+
+main {
+    flex: 1;
+    max-width: 1300px; /* max width y margin limitan el contenido a 1300 píxeles y lo centra; en pantallas más anchas quedan esos márgenes. */
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+}

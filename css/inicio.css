@@ -1,0 +1,222 @@
+/* ===== ANCHO GENERAL DEL INICIO ===== */
+
+main.inicio {
+    max-width: none;
+}
+
+/* Mantiene centrada la sección de juegos */
+
+#juegos-populares {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== 1. CONTENEDOR DE LA PORTADA ===== */
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 0%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* ===== 2. IMAGEN Y DEGRADADO ===== */
+
+.carrusel-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(11, 12, 16, 0.95) 0%,
+        rgba(11, 12, 16, 0.6) 60%,
+        rgba(11, 12, 16, 0.1) 100%
+    );
+    z-index: 2;
+}
+
+/* ===== 3. TEXTO Y BOTONES DE LA PORTADA ===== */
+
+.hero-texto {
+    position: relative;
+    z-index: 10;
+    flex: 1;
+    max-width: 550px;
+    padding-left: 5rem;
+}
+
+.hero-texto h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1.2rem;
+}
+
+.hero-texto h1 span {
+    color: var(--color-primary);
+    display: block;
+}
+
+.hero-texto p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 1.2rem;
+}
+
+/* ===== 4. FLECHAS DEL CARRUSEL ===== */
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid var(--border-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.2s;
+}
+
+.carrusel-btn:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#btn-ant {
+    left: 15px;
+}
+
+#btn-sig {
+    right: 15px;
+}
+
+/* ===== 5. SECCIÓN DE JUEGOS POPULARES ===== */
+
+#juegos-populares {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;
+    margin: 2rem auto 0;
+    padding: 3rem 4rem;
+    background-color: var(--bg-main);
+}
+
+#juegos-populares header {
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#juegos-populares h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+#juegos-populares header a {
+    color: var(--color-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+#juegos-populares header a:hover {
+    opacity: 0.8;
+}
+
+/* ===== 6. TARJETAS DE JUEGOS ===== */
+
+.grid-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.card-juego {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    flex: 1 1 260px;
+    max-width: 320px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-juego:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2);
+}
+
+.card-juego img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-juego h3 {
+    padding: 18px;
+    font-size: 1.15rem;
+    color: var(--color-text);
+    text-align: center;
+}
+
+/* ===== 7. ADAPTACIÓN A PANTALLAS PEQUEÑAS ===== */
+
+@media (max-width: 968px) {
+    #hero {
+        gap: 2rem;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.5rem;
+    }
+}

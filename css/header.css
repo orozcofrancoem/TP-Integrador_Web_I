@@ -1,0 +1,129 @@
+/* ===== 1. CABECERA PRINCIPAL ===== */
+
+.header-principal {
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ===== 2. LOGO ===== */
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===== 3. NAVEGACIÓN ===== */
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: color 0.2s;
+}
+
+/* Al pasar el mouse o estar en la página actual */
+
+nav ul li a:hover,
+nav ul li a.activo {
+    color: #fff;
+    background-color: #a855f726;
+}
+
+/* Enlace de la página actual */
+
+nav ul li a.activo {
+    color: var(--color-primary);
+    border: 1px solid #a855f74d;
+}
+
+/* ===== 4. BUSCADOR ===== */
+
+.buscador {
+    display: flex;
+    align-items: center;
+    background-color: #1a1c26;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 4px 12px;
+    width: 240px;
+}
+
+.buscador input {
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 4px;
+}
+
+.buscador input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.buscador button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* ===== 5. PANEL DE USUARIO ===== */
+
+.usuario-panel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.usuario-panel button {
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+/* ===== 6. ADAPTACIÓN A PANTALLAS PEQUEÑAS ===== */
+
+@media (max-width: 968px) {
+    .header-principal {
+        padding: 0 1rem;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 1rem;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .buscador {
+        display: none;
+    }
+}
