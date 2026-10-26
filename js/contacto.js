@@ -33,6 +33,8 @@ if (nombre === "" || nombre.length < 3) {
 
 if (email === "") {
     mostrarError("error-email", "El correo electrónico es obligatorio.")
+    esValido = false;
+
 } else if (!regexEmail.test(email)) {
     mostrarError("error-email", "Ingrese un correo electrónico válido (ej. ejemplo@gmail.com).")
     esValido = false;
@@ -70,10 +72,42 @@ function mostrarError(idElemento, mensaje) {
 }
 
 function limpiarErrores() {
-    const errores = document.querySelectorAll(".error-msg");
+    const errores = formContacto.querySelectorAll(".error-msg");
     errores.forEach((span) => { span.textContent = "";
     });
-    contenedorResumen.innerHTML = ""; // Limpia el resumen anterior si existe
+    contenedorResumen.replaceChildren(); // Limpia el resumen anterior si existe
+}
+
+// AGREGA UN DATO AL RESUMEN
+
+function agregarDatoResumen(etiqueta, valor) {
+    const parrafo = document.createElement("p");
+    const titulo = document.createElement("strong");
+
+    titulo.textContent = `${etiqueta}: `;
+    parrafo.append(titulo, document.createTextNode(valor));
+
+    contenedorResumen.appendChild(parrafo);
+}
+
+// GENERA EL RESUMEN DEL FORMULARIO
+
+// Esta es la función que ya llamás cuando esValido es verdadero. Crea el título y utiliza agregarDatoResumen() para mostrar los cinco campos
+function generarResumenDOM(nombre, email, telefono, asunto, mensaje) {
+    const titulo = document.createElement("h2");
+    titulo.textContent = "Resumen de tu consulta";
+
+    const aviso = document.createElement("p");
+    aviso.textContent =
+        "Los datos se validaron correctamente. Esta demostración no envía la consulta.";
+
+    contenedorResumen.append(titulo, aviso);
+
+    agregarDatoResumen("Nombre", nombre);
+    agregarDatoResumen("Correo electrónico", email);
+    agregarDatoResumen("Teléfono", telefono);
+    agregarDatoResumen("Asunto", asunto);
+    agregarDatoResumen("Mensaje", mensaje);
 }
 
 
