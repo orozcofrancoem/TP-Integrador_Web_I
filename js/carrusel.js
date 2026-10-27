@@ -4,49 +4,49 @@ const carruselData = [
   {
     id: 1,
     src: "./img/01.png",
-    alt: "Imagen en carrusel",
+    alt: "Habitación gamer con computadora e iluminación violeta",
     caption: "Imagen 1",
   },
   {
     id: 2,
     src: "./img/02.jpg",
-    alt: "Imagen en carrusel",
+    alt: "Joystick frente a una pantalla con luces violetas",
     caption: "Imagen 2",
   },
   {
     id: 3,
     src: "./img/03.jpg",
-    alt: "Imagen en carrusel",
+    alt: "Auriculares gamer con iluminación violeta",
     caption: "Imagen 3",
   },
   {
     id: 4,
     src: "./img/04.jpg",
-    alt: "Imagen en carrusel",
+    alt: "Personaje frente a un paisaje de fantasía",
     caption: "Imagen 4",
   },
   {
     id: 5,
     src: "./img/05.jpg",
-    alt: "Imagen en carrusel",
+    alt: "Personaje futurista en una ciudad con luces de neón",
     caption: "Imagen 5",
   },
   {
     id: 6,
     src: "./img/06.jpg",
-    alt: "Imagen en carrusel",
+    alt: "Colección de figuras gamer en estantes iluminados",
     caption: "Imagen 6",
   },
   {
     id: 7,
     src: "./img/07.jpg",
-    alt: "Imagen en carrusel",
+    alt: "Teclado gamer con luces violetas junto a un mouse",
     caption: "Imagen 7",
   },
   {
     id: 8,
     src: "./img/08.jpg",
-    alt: "Imagen en carrusel",
+    alt: "Habitación gamer con pantalla y luces violetas",
     caption: "Imagen 8",
   },
 ];
@@ -54,8 +54,8 @@ const carruselData = [
 // REFERENCIAS A LOS ELEMENTOS DEL DOM
 
 const caruselImage = document.getElementById("img-carrusel");
-// const caruselCaption = document.getElementById("img-carrusel");
-// const counterElement = document.getElementById("img-carrusel");
+const caruselCaption = document.getElementById("img-carrusel");
+const counterElement = document.getElementById("img-carrusel");
 const prevBtn = document.getElementById("btn-ant");
 const nextBtn = document.getElementById("btn-sig");
 
@@ -74,10 +74,10 @@ function updateCarusel() {
   caruselImage.alt = currentItem.alt; // Requisito: texto alternativo adecuado
 
   // Actualizamos el texto de la leyenda (caption)
-  // caruselCaption.textContent = currentItem.caption;
+  caruselCaption.textContent = currentItem.caption;
 
   // Actualizamos el contador numérico en pantalla (ej: 1 de 4)
-  // counterElement.textContent = `${currentIndex + 1} de ${carruselData.length}`;
+  counterElement.textContent = `${currentIndex + 1} de ${carruselData.length}`;
 }
 
 // FUNCIONES DE NAVEGACIÓN CIRCULAR

@@ -10,12 +10,11 @@
     border: 1px solid var(--border-color);
     border-radius: 16px;
     overflow: hidden;
-    flex: 1 1 260px;
-    max-width: 320px;
+    box-sizing: border-box;
+    flex: 0 1 calc((100% - 50px) / 3);
     transition: transform 0.3s ease,
         border-color 0.3s ease,
-        box-shadow 0.3s ease
-    ;
+        box-shadow 0.3s ease;
 }
 
 .juego:hover {
@@ -44,4 +43,18 @@
 .juegos-lista article a {
     color: var(--color-text);
     text-decoration: none;
+}
+
+/* Dos columnas en pantallas medianas */
+@media (max-width: 900px) {
+    .juego {
+        flex-basis: calc((100% - 25px) / 2);
+    }
+}
+
+/* Una columna en celulares */
+@media (max-width: 600px) {
+    .juego {
+        flex-basis: 100%;
+    }
 }
