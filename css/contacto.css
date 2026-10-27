@@ -1,0 +1,41 @@
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+
+}
+
+.contacto-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.contacto-header p,
+h1 {
+    margin: 0;
+}
+
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: content;
+    gap: 10px;
+}
+
+.campo-grupo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+label {
+    width: 200px;
+}
+
