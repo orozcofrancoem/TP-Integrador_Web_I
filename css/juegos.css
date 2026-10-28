@@ -28,7 +28,7 @@
     object-fit: cover;
 }
 
-.juego h3 { 
+.juego h3 {
     padding: 18px;
     font-size: 1.15rem;
     color: var(--color-text);

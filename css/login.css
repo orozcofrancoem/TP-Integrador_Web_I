@@ -1,0 +1,25 @@
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.login-presentacion {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+.campo-grupo input {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-card);
+    color: var(--color-text);
+    font: inherit;
+}
