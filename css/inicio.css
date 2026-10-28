@@ -196,6 +196,10 @@ main.inicio {
     text-align: center;
 }
 
+.card-juego a{
+    text-decoration: none; /* Quita el subrayado del link*/
+}
+
 /* ===== 7. ADAPTACIÓN A PANTALLAS PEQUEÑAS ===== */
 
 @media (max-width: 968px) {

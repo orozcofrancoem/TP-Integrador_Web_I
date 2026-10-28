@@ -52,7 +52,6 @@ h1 {
 .campo-grupo input,
 .campo-grupo textarea {
     box-sizing: border-box; /* Hace que el relleno y el borde estén incluidos dentro del ancho que le asignemos al campo. */
-    width: 100%; /*Indica que el campo debe ocupar el 100 % del ancho disponible de su contenedor, que en este caso es .campo-grupo. */
     padding: 12px;
     border: 1px solid var(--border-color);/* Define las características del borde:*/
                                           /*   1px: el grosor.*/

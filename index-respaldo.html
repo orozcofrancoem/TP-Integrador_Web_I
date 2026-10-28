@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re Piola Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/componentes.css">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- Librería de iconos de fontawesome -->
+</head>
+
+<body>
+    <header class="header-principal">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="./index.html">
+                <span>🎮</span>
+                <span>Re Piola Games</span>
+                <span>🎮</span>
+            </a>
+        </div>
+
+        <!--  NAVEGACIÓN PRINCIPAL   -->
+        <nav>
+            <ul>
+                <li> <a href="./index.html" class="activo">Inicio</a></li>
+                <li> <a href="./contacto.html">Contacto</a></li>
+                <li> <a href="./juegos.html">Juegos</a></li>
+                <li> <a href="./perfil.html">Perfil</a></li>
+                <li> <a href="./login.html">Login</a></li>
+                <li> <a href="./noticias.html">Noticias</a></li>
+            </ul>
+        </nav>
+
+        <!--  BUSCADOR   -->
+        <form class="buscador">
+            <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos...">
+            <button type="submit">🔍</button>
+        </form>
+
+        <!--  NOTIFICACIONES   -->
+        <div class="usuario-panel">
+            <button type="button">🔔</button>
+            <a href="./login.html">
+                <img src="img/usuario.jpg" alt="Perfil de Usuario">
+            </a>
+        </div>
+    </header>
+
+    <!-------------  CONTENIDO PRINCIPAL --------- -->
+    <main id="contenido-principal">
+        <!-----  HERO  ----->
+        <section id="hero">
+            <div class="hero-texto">
+                <h1>Tu mundo gamer <span>en un solo lugar</span> </h1>
+                <p>
+                    Bienvenido a Re Piola Games, tu destino definitivo
+                    para todo lo relacionado con videojuegos. Explora
+                    nuestras últimas noticias, descubre nuevos juegos 
+                    y mantente al día con las tendencias del mundo
+                    gamer.
+                </p>
+                <div class="hero-botones">
+                    <a href="./contacto.html" class="btn">Unirme ahora</a>
+                    <a href="./juegos.html" class="btn-secundario">Explorar Juegos</a>
+                </div>
+            </div>
+
+            <!-------------  Imagen principal --------- -->
+
+            <section class="contenedor-carrusel">
+
+                <div class="contenedor-imagenes">
+                    <!-- botón retroceder -->
+                    <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <!-- imagen dinámica que cambiará con JS -->
+                    <div class="carrusel-slide">
+                        <img src="./img/01.png" alt="Imagen en carrusel" id="img-carrusel">
+                    </div>
+
+                    <!-- botón avanzar -->
+                    <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+
+        </section>
+
+        <!-------------  Juegos Populares --------- -->
+        <section id="juegos-populares">
+            <div class="cartas-juego">
+                <h2>Lo mas popular</h2>
+                <a href="./juegos.html">Ver todos <i class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <h2>¿Quiénes somos?</h2>
+            <p>
+                Somos un grupo de estudiantes realizando una página web sobre
+                videojuegos. Aún en desarrollo... Este contenido mejorará.
+            </p>
+        </div>
+
+        <div class="footer-redes">
+            <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" aria-label="GitHub"> <i
+                    class="fa-brands fa-github"></i></a>
+            <a href=""></a>
+        </div>
+    </footer>
+
+    <!-- Como llamar iconos de la librería de fontawesome, se puede hacer de la siguiente manera:
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-solid fa-bell"></i>
+    <i class="fa-regular fa-calendar"></i>
+    <i class="fa-brands fa-github"></i> -->
+
+    <script src="./js/carrusel.js"></script>
+
+</body>
+
+</html>

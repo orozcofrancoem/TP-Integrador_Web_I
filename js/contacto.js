@@ -10,9 +10,9 @@ const contenedorResumen = document.getElementById("resumen-envio");
 // EXPRESIONES REGULARES
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const regexTelefono = /^\d{7,15}$/; // solo números, entre 7 y 15 dígitos
-
+const regexNombre =  /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/; //Otra manera es:  /^[^\d]+$/;
 // EVENTO PRINCIPAL DEL FORMULARIO
-formContacto.addEventListener("submit", (e) => {
+formContacto.addEventListener("submit", (e) =>{ 
   e.preventDefault(); // prevenimos el envío tradicional por defecto
 
   limpiarErrores(); // utilizamos método propio para limpiar errores previos
@@ -27,34 +27,37 @@ formContacto.addEventListener("submit", (e) => {
   let esValido = true;
 
 if (nombre === "" || nombre.length < 3) {
-    mostrarError("error-nombre", "El nombre debe tener al menos 3 caracteres.")
+    mostrarError("error-nombre", "El nombre debe tener al menos 3 caracteres.");
+    esValido = false;
+}else if  (!regexNombre.test(nombre)){
+    mostrarError("error-nombre", "Este campo solo acepta letras A-a Z-z.");
     esValido = false;
 }
 
 if (email === "") {
-    mostrarError("error-email", "El correo electrónico es obligatorio.")
+    mostrarError("error-email", "El correo electrónico es obligatorio.");
     esValido = false;
 
 } else if (!regexEmail.test(email)) {
-    mostrarError("error-email", "Ingrese un correo electrónico válido (ej. ejemplo@gmail.com).")
+    mostrarError("error-email", "Ingrese un correo electrónico válido (ej. ejemplo@gmail.com).");
     esValido = false;
 }
 
 if (telefono === "") {
-    mostrarError("error-telefono", "El número de teléfono es obligatorio.")
+    mostrarError("error-telefono", "El número de teléfono es obligatorio.");
     esValido = false;
 } else if (!regexTelefono.test(telefono)) {
-    mostrarError("error-telefono", "Ingrese un número de teléfono válido (solo números, entre 7 y 15 dígitos).")
+    mostrarError("error-telefono", "Ingrese un número de teléfono válido (solo números, entre 7 y 15 dígitos).");
     esValido = false;
 }
 
 if (asunto === "") {
-    mostrarError("error-asunto", "El asunto es obligatorio.")
+    mostrarError("error-asunto", "El asunto es obligatorio.");
     esValido = false;
 }
 
 if (mensaje === "" || mensaje.length < 10) {
-    mostrarError("error-mensaje", "El mensaje debe contener al menos 10 caracteres.")
+    mostrarError("error-mensaje", "El mensaje debe contener al menos 10 caracteres.");
     esValido = false;
 }
 
