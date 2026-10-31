@@ -1,114 +1,139 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión | Re Piola Games</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iniciar sesión | Re Piola Games</title>
+    <!-- Iconos de Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <!-- Iconos de Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Estilos generales y compartidos -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/componentes.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
 
-  <!-- Estilos generales y compartidos -->
-  <link rel="stylesheet" href="./css/base.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/componentes.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/login.css">
-</head>
+  <body>
+    <!-- ===== 1. CABECERA ===== -->
 
-<body>
-  <!-- ===== 1. CABECERA ===== -->
+    <header class="header-principal">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <span>🎮</span>
+          <span>Re Piola Games</span>
+          <span>🎮</span>
+        </a>
+      </div>
 
-  <header class="header-principal">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="./index.html">
-        <span>🎮</span>
-        <span>Re Piola Games</span>
-        <span>🎮</span>
-      </a>
-    </div>
+      <!-- Navegación principal -->
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./juegos.html">Juegos</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
+      </nav>
 
-    <!-- Navegación principal -->
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-        <li><a href="./juegos.html">Juegos</a></li>
-        <li><a href="./login.html">Login</a></li>
-      </ul>
-    </nav>
-
-    <!-- Buscador -->
-    <form class="buscador" role="search">
-      <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos..." aria-label="Buscar juegos" />
-      <button type="submit" aria-label="Buscar">🔍</button>
-    </form>
-
-  </header>
-
-  <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
-
-  <main>
-    <section id="login">
-      <!-- ===== 2.1. PRESENTACIÓN ===== -->
-
-      <header class="login-presentacion">
-        <h1>Iniciar sesión</h1>
-        <p>Accede a tu cuenta para disfrutar de todas las funciones</p>
-      </header>
-
-      <!-- ===== 2.2. FORMULARIO DE ACCESO ===== -->
-
-      <form action="procesar_login.php" method="POST">
-        <!-- Usuario -->
-        <div class="campo-grupo">
-          <label for="usuario">Usuario:</label>
-          <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" autocomplete="off" required />
-        </div>
-
-        <!-- Contraseña -->
-        <div class="campo-grupo">
-          <label for="contrasena">Contraseña:</label>
-          <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" autocomplete="off"
-            required />
-        </div>
-
-        <!-- Envío del formulario -->
-        <div>
-          <button type="submit" class="btn">Iniciar sesión</button>
-        </div>
+      <!-- Buscador -->
+      <form class="buscador" role="search">
+        <input
+          type="text"
+          id="buscar"
+          name="buscar"
+          placeholder="Buscar juegos..."
+          aria-label="Buscar juegos"
+        />
+        <button type="submit" aria-label="Buscar">🔍</button>
       </form>
+    </header>
 
-      <!-- ===== 2.3. ACCESO AL REGISTRO ===== -->
+    <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
 
-      <p>
-        ¿No tienes una cuenta?
-        <a href="./registro.html">Regístrate aquí</a>
-      </p>
-    </section>
-  </main>
+    <main>
+      <section id="login">
+        <!-- ===== 2.1. PRESENTACIÓN ===== -->
 
-  <!-- ===== 3. PIE DE PÁGINA ===== -->
+        <header class="login-presentacion">
+          <h1>Iniciar sesión</h1>
+          <p>Accede a tu cuenta para disfrutar de todas las funciones</p>
+        </header>
 
-  <footer>
-    <div class="footer-info">
-      <h2>Sobre nosotros</h2>
-      <p>
-        Somos un grupo de estudiantes realizando una página web sobre
-        videojuegos. Aún en desarrollo... Este contenido mejorará.
-      </p>
-    </div>
+        <!-- ===== 2.2. FORMULARIO DE ACCESO ===== -->
 
-    <div class="footer-redes">
-      <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" rel="noopener noreferrer"
-        aria-label="GitHub">
-        <i class="fa-brands fa-github" aria-hidden="true"></i>
-      </a>
-    </div>
-  </footer>
-  <script src="./js/componentes.js"></script>
-</body>
+        <form>
+          <!-- Usuario -->
+          <div class="campo-grupo">
+            <label for="usuario">Usuario:</label>
+            <input
+              type="text"
+              id="usuario"
+              name="usuario"
+              placeholder="Nombre de usuario"
+              autocomplete="off"
+              required
+            />
+          </div>
 
+          <!-- Contraseña -->
+          <div class="campo-grupo">
+            <label for="contrasena">Contraseña:</label>
+            <input
+              type="password"
+              id="contrasena"
+              name="contrasena"
+              placeholder="Contraseña"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <!-- Envío del formulario -->
+          <div>
+            <button type="submit" class="btn">Iniciar sesión</button>
+          </div>
+        </form>
+
+        <!-- ===== 2.3. ACCESO AL REGISTRO ===== -->
+
+        <p>
+          ¿No tienes una cuenta?
+          <a href="#">Regístrate aquí</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
+
+    <footer>
+      <div class="footer-info">
+        <h2>Sobre nosotros</h2>
+        <p>
+          Somos un grupo de estudiantes apasionados por los videojuegos. Creamos
+          Re Piola Games como proyecto académico para compartir juegos,
+          novedades y nuestra pasión por el mundo gamer, mientras aprendemos
+          desarrollo web.
+        </p>
+        <h5>© 2026 Re Piola Games · Proyecto educativo en desarrollo.</h5>
+      </div>
+
+      <div class="footer-redes">
+        <a
+          href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>

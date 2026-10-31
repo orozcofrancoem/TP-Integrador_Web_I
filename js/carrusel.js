@@ -72,12 +72,6 @@ function updateCarusel() {
   const currentItem = carruselData[currentIndex]; // Obtenemos el elemento correspondiente al índice actual
   caruselImage.src = currentItem.src; // Actualizamos los atributos y contenidos de la imagen de forma dinámica
   caruselImage.alt = currentItem.alt; // Requisito: texto alternativo adecuado
-
-  // Actualizamos el texto de la leyenda (caption)
-  caruselCaption.textContent = currentItem.caption;
-
-  // Actualizamos el contador numérico en pantalla (ej: 1 de 4)
-  counterElement.textContent = `${currentIndex + 1} de ${carruselData.length}`;
 }
 
 // FUNCIONES DE NAVEGACIÓN CIRCULAR

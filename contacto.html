@@ -1,139 +1,180 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Re Piola Games</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto | Re Piola Games</title>
+    <!-- Iconos de Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <!-- Iconos de Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Estilos generales y compartidos -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/componentes.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/contacto.css" />
+  </head>
 
-  <!-- Estilos generales y compartidos -->
-  <link rel="stylesheet" href="./css/base.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/componentes.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/contacto.css" />
-</head>
+  <body>
+    <!-- ===== 1. CABECERA ===== -->
 
-<body>
-  <!-- ===== 1. CABECERA ===== -->
+    <header class="header-principal">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <span>🎮</span>
+          <span>Re Piola Games</span>
+          <span>🎮</span>
+        </a>
+      </div>
 
-  <header class="header-principal">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="./index.html">
-        <span>🎮</span>
-        <span>Re Piola Games</span>
-        <span>🎮</span>
-      </a>
-    </div>
+      <!-- Navegación principal -->
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./juegos.html">Juegos</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
+      </nav>
 
-    <!-- Navegación principal -->
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-        <li><a href="./juegos.html">Juegos</a></li>
-        <li><a href="./login.html">Login</a></li>
-      </ul>
-    </nav>
+      <!-- Buscador -->
+      <form class="buscador" role="search">
+        <input
+          type="text"
+          id="buscar"
+          name="buscar"
+          placeholder="Buscar juegos..."
+          aria-label="Buscar juegos"
+        />
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+    </header>
+    <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
 
-    <!-- Buscador -->
-    <form class="buscador" role="search">
-      <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos..." aria-label="Buscar juegos" />
-      <button type="submit" aria-label="Buscar">🔍</button>
-    </form>
+    <main>
+      <section id="contacto">
+        <!-- ===== 2.1. PRESENTACIÓN ===== -->
 
-  </header>
-  <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
+        <div class="contacto-header">
+          <h1>CONTACTATE CON NOSOTROS</h1>
+          <p>
+            ¿Tienes consultas o sugerencias? Escribinos y te responderemos a la
+            brevedad
+          </p>
+        </div>
 
-  <main>
-    <section id="contacto">
-      <!-- ===== 2.1. PRESENTACIÓN ===== -->
+        <!-- ===== 2.2. FORMULARIO DE CONTACTO ===== -->
 
-      <div class="contacto-header">
-        <h1>CONTACTATE CON NOSOTROS</h1>
+        <div class="contenedor-formulario">
+          <form id="form-contacto" novalidate>
+            <!-- Nombre completo -->
+            <div class="campo-grupo">
+              <label for="nombre">Nombre completo *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej. Franco Orozco"
+                autocomplete="off"
+              />
+              <span class="error-msg" id="error-nombre"></span>
+            </div>
+
+            <!-- Correo electrónico -->
+            <div class="campo-grupo">
+              <label for="email">Correo Electrónico *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ejemplo@gmail.com"
+                autocomplete="off"
+              />
+              <span class="error-msg" id="error-email"></span>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="campo-grupo">
+              <label for="telefono">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="ej. 2664840848"
+                autocomplete="off"
+              />
+              <span class="error-msg" id="error-telefono"></span>
+            </div>
+
+            <!-- Asunto -->
+            <div class="campo-grupo">
+              <label for="asunto">Asunto *</label>
+              <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                placeholder="Ej. Consulta sobre juegos"
+                autocomplete="off"
+              />
+              <span class="error-msg" id="error-asunto"></span>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="campo-grupo">
+              <label for="mensaje">Mensaje *</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Ingrese su mensaje aquí..."
+                rows="5"
+                autocomplete="off"
+              ></textarea>
+              <span class="error-msg" id="error-mensaje"></span>
+            </div>
+
+            <!-- Envío del formulario -->
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+
+          <!-- ===== 2.3. RESUMEN DEL FORMULARIO ===== -->
+
+          <div id="resumen-envio"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
+
+    <footer>
+      <div class="footer-info">
+        <h2>Sobre nosotros</h2>
         <p>
-          ¿Tienes consultas o sugerencias? Escribinos y te responderemos a la
-          brevedad
+          Somos un grupo de estudiantes apasionados por los videojuegos. Creamos
+          Re Piola Games como proyecto académico para compartir juegos,
+          novedades y nuestra pasión por el mundo gamer, mientras aprendemos
+          desarrollo web.
         </p>
+        <h5>© 2026 Re Piola Games · Proyecto educativo en desarrollo.</h5>
       </div>
 
-      <!-- ===== 2.2. FORMULARIO DE CONTACTO ===== -->
-
-      <div class="contenedor-formulario">
-        <form id="form-contacto" novalidate>
-          <!-- Nombre completo -->
-          <div class="campo-grupo">
-            <label for="nombre">Nombre completo *</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ej. Franco Orozco" autocomplete="off" />
-            <span class="error-msg" id="error-nombre"></span>
-          </div>
-
-          <!-- Correo electrónico -->
-          <div class="campo-grupo">
-            <label for="email">Correo Electrónico *</label>
-            <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" autocomplete="off" />
-            <span class="error-msg" id="error-email"></span>
-          </div>
-
-          <!-- Teléfono -->
-          <div class="campo-grupo">
-            <label for="telefono">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="ej. 2664840848" autocomplete="off" />
-            <span class="error-msg" id="error-telefono"></span>
-          </div>
-
-          <!-- Asunto -->
-          <div class="campo-grupo">
-            <label for="asunto">Asunto *</label>
-            <input type="text" id="asunto" name="asunto" placeholder="Ej. Consulta sobre juegos" autocomplete="off" />
-            <span class="error-msg" id="error-asunto"></span>
-          </div>
-
-          <!-- Mensaje -->
-          <div class="campo-grupo">
-            <label for="mensaje">Mensaje *</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje aquí..." rows="5"
-              autocomplete="off"></textarea>
-            <span class="error-msg" id="error-mensaje"></span>
-          </div>
-
-          <!-- Envío del formulario -->
-          <button type="submit" class="btn">Enviar</button>
-        </form>
-
-        <!-- ===== 2.3. RESUMEN DEL FORMULARIO ===== -->
-
-        <div id="resumen-envio"></div>
+      <div class="footer-redes">
+        <a
+          href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
       </div>
-    </section>
-  </main>
+    </footer>
+    <!-- ===== 4. JAVASCRIPT ===== -->
 
-  <!-- ===== 3. PIE DE PÁGINA ===== -->
-
-  <footer>
-    <div class="footer-info">
-      <h2>Sobre nosotros</h2>
-      <p>
-        Somos un grupo de estudiantes realizando una página web sobre
-        videojuegos. Aún en desarrollo... Este contenido mejorará.
-      </p>
-    </div>
-
-    <div class="footer-redes">
-      <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" rel="noopener noreferrer"
-        aria-label="GitHub">
-        <i class="fa-brands fa-github" aria-hidden="true"></i>
-      </a>
-    </div>
-  </footer>
-  <!-- ===== 4. JAVASCRIPT ===== -->
-
-  <script src="./js/contacto.js"></script>
-  <script src="./js/componentes.js"></script>
-</body>
-
+    <script src="./js/contacto.js"></script>
+  </body>
 </html>

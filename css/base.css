@@ -32,3 +32,11 @@ main {
     width: 100%;
     padding: 0;
 }
+
+/* ===== CÁLCULO DE TAMAÑOS ===== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

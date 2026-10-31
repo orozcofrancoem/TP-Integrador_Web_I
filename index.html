@@ -1,160 +1,179 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Re Piola Games</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Re Piola Games</title>
+    <!-- Iconos de Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <!-- Iconos de Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Estilos generales y compartidos -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/componentes.css" />
 
-  <!-- Estilos generales y compartidos -->
-  <link rel="stylesheet" href="./css/base.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/componentes.css" />
+    <!-- Estilos del inicio y pie de página -->
+    <link rel="stylesheet" href="./css/inicio.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
 
-  <!-- Estilos del inicio y pie de página -->
-  <link rel="stylesheet" href="./css/inicio.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-</head>
+  <body>
+    <!-- ===== 1. CABECERA ===== -->
 
-<body>
-  <!-- ===== 1. CABECERA ===== -->
-
-  <header class="header-principal">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="./index.html">
-        <span>🎮</span>
-        <span>Re Piola Games</span>
-        <span>🎮</span>
-      </a>
-    </div>
-
-    <!-- Navegación principal -->
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-        <li><a href="./juegos.html">Juegos</a></li>
-        <li><a href="./login.html">Login</a></li>
-      </ul>
-    </nav>
-
-    <!-- Buscador -->
-    <form class="buscador" role="search">
-      <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos..." aria-label="Buscar juegos" />
-      <button type="submit" aria-label="Buscar">🔍</button>
-    </form>
-  </header>
-
-  <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
-
-  <main class="inicio">
-    <!-- ===== 2.1. PORTADA Y CARRUSEL ===== -->
-
-    <section id="hero">
-      <!-- Imagen que actualiza carrusel.js -->
-      <img src="./img/01.png" alt="Habitación gamer con computadora y luces violetas" , id="img-carrusel"
-        class="carrusel-fondo" />
-
-      <!-- Presentación y enlaces -->
-      <div class="hero-texto">
-        <h1>
-          Tu mundo gamer
-          <span>en un solo lugar</span>
-        </h1>
-
-        <p>
-          Descubrí nuevos juegos, compartí tu pasión y viví la experiencia
-          gamer en un solo lugar.
-        </p>
-
-        <div class="hero-botones">
-          <a href="./login.html" class="btn">Unirme ahora</a>
-          <a href="./juegos.html" class="btn-secundario"> Explorar Juegos </a>
-        </div>
-      </div>
-
-      <!-- Controles del carrusel -->
-      <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-
-      <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-    </section>
-
-    <!-- ===== 2.2. JUEGOS POPULARES ===== -->
-
-    <section id="juegos-populares">
-      <!-- Título y enlace al catálogo -->
-      <header>
-        <h2>Lo más popular</h2>
-        <a href="./juegos.html">
-          Ver todos
-          <i class="fa-solid fa-arrow-right"></i>
+    <header class="header-principal">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <span>🎮</span>
+          <span>Re Piola Games</span>
+          <span>🎮</span>
         </a>
-      </header>
-
-      <!-- Tarjetas organizadas con Flexbox -->
-      <div class="grid-juegos">
-        <article class="card-juego">
-          <a href="https://www.ea.com/es-es/games/fifa/fifa-23" target="_blank"><img src="./img/FC-27.avif"
-              alt="FC-27" />
-            <h3>FC 27</h3>
-          </a>
-        </article>
-
-        <article class="card-juego">
-          <a href="https://www.callofduty.com/" target="_blank">
-            <img src="img/CallOfDuty.webp" alt="Call of Duty" />
-            <h3>Call of Duty</h3>
-          </a>
-        </article>
-
-        <article class="card-juego">
-          <a href="https://www.fortnite.com/?lang=es-ES" target="_blank">
-            <img src="./img/Fornite.webp" alt="Fortnite" />
-            <h3>Fortnite</h3>
-          </a>
-        </article>
-
-        <article class="card-juego">
-          <a href="https://www.rockstargames.com/VI" target="_blank">
-            <img src="./img/GtaV.webp" alt="GTA V" />
-            <h3>GTA VI</h3>
-          </a>
-        </article>
       </div>
-    </section>
-  </main>
 
-  <!-- ===== 3. PIE DE PÁGINA ===== -->
+      <!-- Navegación principal -->
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./juegos.html">Juegos</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
+      </nav>
 
-  <footer>
-    <div class="footer-info">
-      <h2>Sobre nosotros</h2>
-      <p>
-        Somos un grupo de estudiantes realizando una página web sobre
-        videojuegos. Aún en desarrollo... Este contenido mejorará.
-      </p>
-    </div>
+      <!-- Buscador -->
+      <form class="buscador" role="search">
+        <input
+          type="text"
+          id="buscar"
+          name="buscar"
+          placeholder="Buscar juegos..."
+          aria-label="Buscar juegos"
+        />
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+    </header>
 
-    <div class="footer-redes">
-      <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" rel="noopener noreferrer"
-        aria-label="GitHub">
-        <i class="fa-brands fa-github" aria-hidden="true"></i>
-      </a>
-    </div>
-  </footer>
+    <!-- ===== 2. CONTENIDO PRINCIPAL ===== -->
 
-  <!-- ===== 4. JAVASCRIPT ===== -->
+    <main class="inicio">
+      <!-- ===== 2.1. PORTADA Y CARRUSEL ===== -->
 
-  <script src="./js/carrusel.js"></script>
-  <script src="./js/componentes.js"></script>
-</body>
+      <section id="hero">
+        <!-- Imagen que actualiza carrusel.js -->
+        <img
+          src="./img/01.png"
+          alt="Habitación gamer con computadora y luces violetas"
+          id="img-carrusel"
+          class="carrusel-fondo"
+        />
 
+        <!-- Presentación y enlaces -->
+        <div class="hero-texto">
+          <h1>
+            Tu mundo gamer
+            <span>en un solo lugar</span>
+          </h1>
+
+          <p>
+            Descubrí nuevos juegos, compartí tu pasión y viví la experiencia
+            gamer en un solo lugar.
+          </p>
+
+          <div class="hero-botones">
+            <a href="./login.html" class="btn">Unirme ahora</a>
+            <a href="./juegos.html" class="btn-secundario"> Explorar Juegos </a>
+          </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button id="btn-ant" class="carrusel-btn" aria-label="anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button id="btn-sig" class="carrusel-btn" aria-label="siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <!-- ===== 2.2. JUEGOS POPULARES ===== -->
+
+      <section id="juegos-populares">
+        <!-- Título y enlace al catálogo -->
+        <header>
+          <h2>Lo más popular</h2>
+          <a href="./juegos.html">
+            Ver todos
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </header>
+
+        <!-- Tarjetas organizadas con Flexbox -->
+        <div class="grid-juegos">
+          <article class="card-juego">
+            <a
+              href="https://www.ea.com/es/games/ea-sports-fc"
+              target="_blank"
+              ><img src="./img/FC-27.avif" alt="FC-27" />
+              <h3>FC 27</h3>
+            </a>
+          </article>
+
+          <article class="card-juego">
+            <a href="https://www.callofduty.com/" target="_blank">
+              <img src="img/CallOfDuty.webp" alt="Call of Duty" />
+              <h3>Call of Duty</h3>
+            </a>
+          </article>
+
+          <article class="card-juego">
+            <a href="https://www.fortnite.com/?lang=es-ES" target="_blank">
+              <img src="./img/Fortnite.webp" alt="Fortnite" />
+              <h3>Fortnite</h3>
+            </a>
+          </article>
+
+          <article class="card-juego">
+            <a href="https://www.rockstargames.com/VI" target="_blank">
+              <img src="./img/GtaV.webp" alt="GTA V" />
+              <h3>GTA VI</h3>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
+
+    <footer>
+      <div class="footer-info">
+        <h2>Sobre nosotros</h2>
+        <p>
+          Somos un grupo de estudiantes apasionados por los videojuegos. Creamos
+          Re Piola Games como proyecto académico para compartir juegos,
+          novedades y nuestra pasión por el mundo gamer, mientras aprendemos
+          desarrollo web.
+        </p>
+        <h5>© 2026 Re Piola Games · Proyecto educativo en desarrollo.</>
+      </div>
+
+      <div class="footer-redes">
+        <a
+          href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- ===== 4. JAVASCRIPT ===== -->
+
+    <script src="./js/carrusel.js"></script>
+  </body>
 </html>

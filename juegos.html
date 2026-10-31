@@ -1,183 +1,195 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juegos | Re Piola Games</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juegos | Re Piola Games</title>
+    <!-- Iconos de Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <!-- Iconos de Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Estilos generales y compartidos -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/componentes.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/juegos.css" />
+  </head>
 
-  <!-- Estilos generales y compartidos -->
-  <link rel="stylesheet" href="./css/base.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/componentes.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/juegos.css" />
-</head>
+  <body>
+    <!-- ===== 1. CABECERA ===== -->
 
-<body>
-  <!-- ===== 1. CABECERA ===== -->
-
-  <header class="header-principal">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="./index.html">
-        <span>🎮</span>
-        <span>Re Piola Games</span>
-        <span>🎮</span>
-      </a>
-    </div>
-
-    <!-- Navegación principal -->
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-        <li><a href="./juegos.html">Juegos</a></li>
-        <li><a href="./login.html">Login</a></li>
-      </ul>
-    </nav>
-
-    <!-- Buscador -->
-    <form class="buscador" role="search">
-      <input type="text" id="buscar" name="buscar" placeholder="Buscar juegos..." aria-label="Buscar juegos" />
-      <button type="submit" aria-label="Buscar">🔍</button>
-    </form>
-
-  </header>
-
-  <main>
-    <!-- ===== 2.1. PRESENTACIÓN ===== -->
-
-    <div class="juegos-presentacion">
-      <h1>Juegos</h1>
-      <p>Explora nuestra colección de juegos</p>
-    </div>
-
-    <section id="juegos" aria-label="Catálogo de juegos">
-      <!-- ===== 2.2. LISTA DE JUEGOS ===== -->
-
-      <div class="juegos-lista">
-        <article class="juego">
-          <a href="https://www.minecraft.net/es-es/" target="_blank">
-            <img src="img/Minecraft.webp" alt="Minecraft" />
-            <h3>Minecraft</h3>
-            <p>Juego de construcción</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://www.ea.com/es-es/games/fifa/fifa-23" target="_blank">
-            <img src="img/FC-27.avif" alt="FIFA" />
-            <h3>FIFA</h3>
-            <p>Juego de fútbol</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://www.callofduty.com/" target="_blank">
-            <img src="img/CallOfDuty.webp" alt="Call of Duty" />
-            <h3>Call of Duty</h3>
-            <p>Juego de disparos en primera persona</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://www.ubisoft.com/es-es/game/assassins-creed" target="_blank">
-            <img src="img/AssassinCreed.avif" alt="Assassin's Creed" />
-            <h3>Assassin's Creed</h3>
-            <p>Juego de acción y aventura</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://www.leagueoflegends.com/es-es/" target="_blank">
-            <img src="img/LOL.webp" alt="League of Legends" />
-            <h3>League of Legends</h3>
-            <p>Juego de estrategia en línea</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://thewitcher.com/es" target="_blank">
-            <img src="img/TheWitcher.webp" alt="The Witcher" />
-            <h3>The Witcher</h3>
-            <p>Juego de rol y fantasía</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://forzamotorsport.net/" target="_blank">
-            <img src="img/ForzaHorizon.webp" alt="Forza Horizon" />
-            <h3>Forza Horizon</h3>
-            <p>Juego de carreras</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://finalfantasy.com/" target="_blank">
-            <img src="img/FinalFantasy.webp" alt="Final Fantasy" />
-            <h3>Final Fantasy</h3>
-            <p>Juego de rol y fantasía</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://playoverwatch.com/es-es/" target="_blank">
-            <img src="img/Overwatch.webp" alt="Overwatch" />
-            <h3>Overwatch</h3>
-            <p>Juego de disparos en equipo</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://www.fortnite.com/?lang=es-ES" target="_blank">
-            <img src="img/Fornite.webp" alt="Fornite" />
-            <h3>Fornite</h3>
-            <p>Juego de battle royal</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://www.residentevil.com/" target="_blank">
-            <img src="img/ResidentEvil.webp" alt="Resident Evil" />
-            <h3>Resident Evil</h3>
-            <p>Juego de terror y supervivencia</p>
-          </a>
-        </article>
-
-        <article class="juego">
-          <a href="https://www.callofduty.com/warzone" target="_blank">
-            <img src="img/CallofDutyWar.webp" alt="Call of Duty: Warzone" />
-            <h3>Call of Duty: Warzone</h3>
-            <p>Juego de disparos en línea</p>
-          </a>
-        </article>
+    <header class="header-principal">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <span>🎮</span>
+          <span>Re Piola Games</span>
+          <span>🎮</span>
+        </a>
       </div>
-    </section>
-  </main>
 
-  <!-- ===== 3. PIE DE PÁGINA ===== -->
+      <!-- Navegación principal -->
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./juegos.html">Juegos</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
+      </nav>
 
-  <footer>
-    <div class="footer-info">
-      <h2>Sobre nosotros</h2>
-      <p>
-        Somos un grupo de estudiantes realizando una página web sobre
-        videojuegos. Aún en desarrollo... Este contenido mejorará.
-      </p>
-    </div>
+      <!-- Buscador -->
+      <form class="buscador" role="search">
+        <input
+          type="text"
+          id="buscar"
+          name="buscar"
+          placeholder="Buscar juegos..."
+          aria-label="Buscar juegos"
+        />
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+    </header>
 
-    <div class="footer-redes">
-      <a href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git" target="_blank" rel="noopener noreferrer"
-        aria-label="GitHub">
-        <i class="fa-brands fa-github" aria-hidden="true"></i>
-      </a>
-    </div>
-  </footer>
-  <script src="./js/componentes.js"></script>
-</body>
+    <main>
+      <!-- ===== 2.1. PRESENTACIÓN ===== -->
 
+      <div class="juegos-presentacion">
+        <h1>Juegos</h1>
+        <p>Explora nuestra colección de juegos</p>
+      </div>
+
+      <section id="juegos" aria-label="Catálogo de juegos">
+        <!-- ===== 2.2. LISTA DE JUEGOS ===== -->
+
+        <div class="juegos-lista">
+          <article class="juego">
+            <a href="https://www.minecraft.net/es-es/" target="_blank">
+              <img src="img/Minecraft.webp" alt="Minecraft" />
+              <h3>Minecraft</h3>
+              <p>Juego de construcción</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://www.ea.com/es/games/ea-sports-fc" target="_blank">
+              <img src="img/FC-27.avif" alt="FIFA" />
+              <h3>FIFA</h3>
+              <p>Juego de fútbol</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://www.callofduty.com/" target="_blank">
+              <img src="img/CallOfDuty.webp" alt="Call of Duty" />
+              <h3>Call of Duty</h3>
+              <p>Juego de disparos en primera persona</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://www.ubisoft.com/es-es/game/assassins-creed" target="_blank">
+              <img src="img/Assassin'sCreed.avif" alt="Assassin's Creed" />
+              <h3>Assassin's Creed</h3>
+              <p>Juego de acción y aventura</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://www.leagueoflegends.com/es-es/" target="_blank">
+              <img src="img/LOL.webp" alt="League of Legends" />
+              <h3>League of Legends</h3>
+              <p>Juego de estrategia en línea</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://thewitcher.com/es" target="_blank">
+              <img src="img/TheWitcher.webp" alt="The Witcher" />
+              <h3>The Witcher</h3>
+              <p>Juego de rol y fantasía</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://forza.net/es-MX/" target="_blank">
+              <img src="img/ForzaHorizon.webp" alt="Forza Horizon" />
+              <h3>Forza Horizon</h3>
+              <p>Juego de carreras</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://finalfantasy.com/" target="_blank">
+              <img src="img/FinalFantasy.webp" alt="Final Fantasy" />
+              <h3>Final Fantasy</h3>
+              <p>Juego de rol y fantasía</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://playoverwatch.com/es-es/" target="_blank">
+              <img src="img/Overwatch.webp" alt="Overwatch" />
+              <h3>Overwatch</h3>
+              <p>Juego de disparos en equipo</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://www.fortnite.com/?lang=es-ES" target="_blank">
+              <img src="img/Fortnite.webp" alt="Fortnite" />
+              <h3>Fortnite</h3>
+              <p>Juego de battle royal</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://www.residentevil.com/" target="_blank">
+              <img src="img/ResidentEvil.webp" alt="Resident Evil" />
+              <h3>Resident Evil</h3>
+              <p>Juego de terror y supervivencia</p>
+            </a>
+          </article>
+
+          <article class="juego">
+            <a href="https://www.callofduty.com/warzone" target="_blank">
+              <img src="img/CallofDutyWar.webp" alt="Call of Duty: Warzone" />
+              <h3>Call of Duty: Warzone</h3>
+              <p>Juego de disparos en línea</p>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== 3. PIE DE PÁGINA ===== -->
+
+    <footer>
+      <div class="footer-info">
+        <h2>Sobre nosotros</h2>
+        <p>
+          Somos un grupo de estudiantes apasionados por los videojuegos. Creamos
+          Re Piola Games como proyecto académico para compartir juegos,
+          novedades y nuestra pasión por el mundo gamer, mientras aprendemos
+          desarrollo web.
+        </p>
+        <h5>© 2026 Re Piola Games · Proyecto educativo en desarrollo.</h5>
+      </div>
+
+      <div class="footer-redes">
+        <a
+          href="https://github.com/orozcofrancoem/TP-Integrador_Web_I.git"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>
