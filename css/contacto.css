@@ -14,6 +14,12 @@
     padding-bottom: 15px;
 }
 
+.contacto-header h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-primary);
+}
+
 .contacto-header p,
 h1 {
     margin: 0;
@@ -40,6 +46,10 @@ h1 {
 .contenedor-formulario {
     width: 100%;
     max-width: 600px;
+    border-radius: 12px;
+    background-color: var(--bg-card);
+    margin-bottom: 20px;
+    padding: 20px; 
 }
 
 .error-msg{
@@ -60,8 +70,8 @@ h1 {
     background-color: var(--bg-card);/*Asigna el color de fondo del campo usando la variable --bg-card, que también usás para las tarjetas del sitio.*/
     color: var(--color-text);/*Define el color del texto que escribe la persona dentro del campo. Usa la variable --color-text para mantener el mismo color general del sitio.*/
     font: inherit;/* Hace que el campo herede la tipografía de su elemento padre: familia, tamaño y otras propiedades de fuente incluidas en font.*/
+    resize: none;/*Evita que la persona pueda cambiar el tamaño del campo de texto.*/
 }
-
 /* Color del borde al seleccionar un campo */
 .campo-grupo input:focus,
 .campo-grupo textarea:focus {

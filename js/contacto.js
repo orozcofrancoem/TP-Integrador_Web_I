@@ -8,7 +8,7 @@ const inputMensaje = document.getElementById("mensaje");
 const contenedorResumen = document.getElementById("resumen-envio");
 
 // EXPRESIONES REGULARES
-const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Verifica que el correo tenga un formato válido
 const regexTelefono = /^\d{7,15}$/; // solo números, entre 7 y 15 dígitos
 const regexNombre =  /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/; //Otra manera es:  /^[^\d]+$/;
 // EVENTO PRINCIPAL DEL FORMULARIO
@@ -19,7 +19,7 @@ formContacto.addEventListener("submit", (e) =>{
 
 // obtenemos valores y los limpiamos con trim 
   const nombre = inputNombre.value.trim();
-  const email = inputEmail.value.trim();
+  const email = inputEmail.value.trim();   
   const telefono = inputTelefono.value.trim();
   const asunto = inputAsunto.value.trim();
   const mensaje = inputMensaje.value.trim();

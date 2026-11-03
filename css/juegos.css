@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.juegos-presentacion h1{
+    color: var(--color-primary);
+}
+
 .juegos-lista {
     display: flex;
     flex-wrap: wrap;
