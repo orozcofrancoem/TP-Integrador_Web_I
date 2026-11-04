@@ -21,6 +21,9 @@ body {
     margin: 0;
     background-color: var(--bg-main);
     color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===== 3. CONTENEDOR PRINCIPAL ===== */

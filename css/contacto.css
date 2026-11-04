@@ -21,15 +21,13 @@
 }
 
 .contacto-header p,
-h1 {
+.contacto-header h1 {
     margin: 0;
 }
 
 #form-contacto {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    flex: content;
     gap: 10px;
 }
 
@@ -39,20 +37,16 @@ h1 {
     gap: 6px;
 }
 
-.campo-grupo label {
-    width: auto;
-}
-
 .contenedor-formulario {
     width: 100%;
     max-width: 600px;
     border-radius: 12px;
     background-color: var(--bg-card);
     margin-bottom: 20px;
-    padding: 20px; 
+    padding: 20px;
 }
 
-.error-msg{
+.error-msg {
     color: red;
     font-size: 0.8rem;
 }
@@ -60,21 +54,28 @@ h1 {
 /* Campos del formulario */
 .campo-grupo input,
 .campo-grupo textarea {
-    box-sizing: border-box; /* Hace que el relleno y el borde estén incluidos dentro del ancho que le asignemos al campo. */
     padding: 12px;
-    border: 1px solid var(--border-color);/* Define las características del borde:*/
-                                          /*   1px: el grosor.*/
-                                          /*   solid: el tipo de línea, en este caso continua.*/
-                                          /*   var(--border-color): el color guardado en la variable CSS --border-color. */
-    border-radius: 8px;/*Redondea las esquinas del campo. Cuanto mayor sea el valor, más redondeadas se verán.*/
-    background-color: var(--bg-card);/*Asigna el color de fondo del campo usando la variable --bg-card, que también usás para las tarjetas del sitio.*/
-    color: var(--color-text);/*Define el color del texto que escribe la persona dentro del campo. Usa la variable --color-text para mantener el mismo color general del sitio.*/
-    font: inherit;/* Hace que el campo herede la tipografía de su elemento padre: familia, tamaño y otras propiedades de fuente incluidas en font.*/
-    resize: none;/*Evita que la persona pueda cambiar el tamaño del campo de texto.*/
+    border: 1px solid var(--border-color);
+    /* Define las características del borde:*/
+    /*   1px: el grosor.*/
+    /*   solid: el tipo de línea, en este caso continua.*/
+    /*   var(--border-color): el color guardado en la variable CSS --border-color. */
+    border-radius: 8px;
+    /*Redondea las esquinas del campo. Cuanto mayor sea el valor, más redondeadas se verán.*/
+    background-color: var(--bg-card);
+    /*Asigna el color de fondo del campo usando la variable --bg-card, que también usás para las tarjetas del sitio.*/
+    color: var(--color-text);
+    /*Define el color del texto que escribe la persona dentro del campo. Usa la variable --color-text para mantener el mismo color general del sitio.*/
+    font: inherit;
+    /* Hace que el campo herede la tipografía de su elemento padre: familia, tamaño y otras propiedades de fuente incluidas en font.*/
+    resize: none;
+    /*Evita que la persona pueda cambiar el tamaño del campo de texto.*/
 }
+
 /* Color del borde al seleccionar un campo */
 .campo-grupo input:focus,
 .campo-grupo textarea:focus {
     outline: 2px solid var(--color-primary);
-    outline-offset: 2px;/*Separa ese contorno 2 píxeles hacia afuera del borde del campo. Esto permite distinguir el borde normal del contorno violeta de selección.*/
+    outline-offset: 2px;
+    /*Separa ese contorno 2 píxeles hacia afuera del borde del campo. Esto permite distinguir el borde normal del contorno violeta de selección.*/
 }

@@ -10,11 +10,8 @@ main.inicio {
     position: relative;
     width: 100%;
     height: 650px;
-    border-radius: 0%;
-    overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 0;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -103,10 +100,9 @@ main.inicio {
 /* ===== 5. SECCIÓN DE JUEGOS POPULARES ===== */
 
 #juegos-populares {
-    box-sizing: border-box;
     width: 100%;
     max-width: 1300px;
-    margin: 2rem auto 0;
+    margin: 0 auto 0;
     padding: 3rem 4rem;
     background-color: var(--bg-main);
 }
