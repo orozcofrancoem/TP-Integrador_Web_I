@@ -10,107 +10,115 @@ const contenedorResumen = document.getElementById("resumen-envio");
 // EXPRESIONES REGULARES
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Verifica que el correo tenga un formato válido
 const regexTelefono = /^\d{7,15}$/; // solo números, entre 7 y 15 dígitos
-const regexNombre =  /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/; //Otra manera es:  /^[^\d]+$/;
+const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/; //Otra manera es:  /^[^\d]+$/;
+
 // EVENTO PRINCIPAL DEL FORMULARIO
-formContacto.addEventListener("submit", (e) =>{ 
+formContacto.addEventListener("submit", (e) => {
   e.preventDefault(); // prevenimos el envío tradicional por defecto
 
   limpiarErrores(); // utilizamos método propio para limpiar errores previos
 
-// obtenemos valores y los limpiamos con trim 
+  // obtenemos valores y los limpiamos con trim
   const nombre = inputNombre.value.trim();
-  const email = inputEmail.value.trim();   
+  const email = inputEmail.value.trim();
   const telefono = inputTelefono.value.trim();
   const asunto = inputAsunto.value.trim();
   const mensaje = inputMensaje.value.trim();
 
   let esValido = true;
 
-if (nombre === "" || nombre.length < 3) {
+  if (nombre === "" || nombre.length < 3) {
     mostrarError("error-nombre", "El nombre debe tener al menos 3 caracteres.");
     esValido = false;
-}else if  (!regexNombre.test(nombre)){
+  } else if (!regexNombre.test(nombre)) {
     mostrarError("error-nombre", "Este campo solo acepta letras A-a Z-z.");
     esValido = false;
-}
+  }
 
-if (email === "") {
+  if (email === "") {
     mostrarError("error-email", "El correo electrónico es obligatorio.");
     esValido = false;
-
-} else if (!regexEmail.test(email)) {
-    mostrarError("error-email", "Ingrese un correo electrónico válido (ej. ejemplo@gmail.com).");
+  } else if (!regexEmail.test(email)) {
+    mostrarError(
+      "error-email",
+      "Ingrese un correo electrónico válido (ej. ejemplo@gmail.com).",
+    );
     esValido = false;
-}
+  }
 
-if (telefono === "") {
+  if (telefono === "") {
     mostrarError("error-telefono", "El número de teléfono es obligatorio.");
     esValido = false;
-} else if (!regexTelefono.test(telefono)) {
-    mostrarError("error-telefono", "Ingrese un número de teléfono válido (solo números, entre 7 y 15 dígitos).");
+  } else if (!regexTelefono.test(telefono)) {
+    mostrarError(
+      "error-telefono",
+      "Ingrese un número de teléfono válido (solo números, entre 7 y 15 dígitos).",
+    );
     esValido = false;
-}
+  }
 
-if (asunto === "") {
+  if (asunto === "") {
     mostrarError("error-asunto", "El asunto es obligatorio.");
     esValido = false;
-}
+  }
 
-if (mensaje === "" || mensaje.length < 10) {
-    mostrarError("error-mensaje", "El mensaje debe contener al menos 10 caracteres.");
+  if (mensaje === "" || mensaje.length < 10) {
+    mostrarError(
+      "error-mensaje",
+      "El mensaje debe contener al menos 10 caracteres.",
+    );
     esValido = false;
-}
+  }
 
-if (esValido) {
+  if (esValido) {
     generarResumenDOM(nombre, email, telefono, asunto, mensaje);
     formContacto.reset(); // sirve para limpiar todo el formulario
-}
+  }
 });
 
 function mostrarError(idElemento, mensaje) {
-    const errorSpan = document.getElementById(idElemento);
-    if (errorSpan) {
-        errorSpan.textContent = mensaje;
-    }
+  const errorSpan = document.getElementById(idElemento);
+  if (errorSpan) {
+    errorSpan.textContent = mensaje;
+  }
 }
 
 function limpiarErrores() {
-    const errores = formContacto.querySelectorAll(".error-msg");
-    errores.forEach((span) => { span.textContent = "";
-    });
-    contenedorResumen.replaceChildren(); // Limpia el resumen anterior si existe
+  const errores = formContacto.querySelectorAll(".error-msg");
+  errores.forEach((span) => {
+    span.textContent = "";
+  });
+  contenedorResumen.replaceChildren(); // Limpia el resumen anterior si existe
 }
 
 // AGREGA UN DATO AL RESUMEN
 
 function agregarDatoResumen(etiqueta, valor) {
-    const parrafo = document.createElement("p");
-    const titulo = document.createElement("strong");
+  const parrafo = document.createElement("p");
+  const titulo = document.createElement("strong");
 
-    titulo.textContent = `${etiqueta}: `;
-    parrafo.append(titulo, document.createTextNode(valor));
+  titulo.textContent = `${etiqueta}: `;
+  parrafo.append(titulo, document.createTextNode(valor));
 
-    contenedorResumen.appendChild(parrafo);
+  contenedorResumen.appendChild(parrafo);
 }
 
 // GENERA EL RESUMEN DEL FORMULARIO
 
 // Esta es la función que ya llamás cuando esValido es verdadero. Crea el título y utiliza agregarDatoResumen() para mostrar los cinco campos
 function generarResumenDOM(nombre, email, telefono, asunto, mensaje) {
-    const titulo = document.createElement("h2");
-    titulo.textContent = "Resumen de tu consulta";
+  const titulo = document.createElement("h2");
+  titulo.textContent = "Resumen de tu consulta";
 
-    const aviso = document.createElement("p");
-    aviso.textContent =
-        "Los datos se validaron correctamente. Esta demostración no envía la consulta.";
+  const aviso = document.createElement("p");
+  aviso.textContent =
+    "Los datos se validaron correctamente. Esta demostración no envía la consulta.";
 
-    contenedorResumen.append(titulo, aviso);
+  contenedorResumen.append(titulo, aviso);
 
-    agregarDatoResumen("Nombre", nombre);
-    agregarDatoResumen("Correo electrónico", email);
-    agregarDatoResumen("Teléfono", telefono);
-    agregarDatoResumen("Asunto", asunto);
-    agregarDatoResumen("Mensaje", mensaje);
+  agregarDatoResumen("Nombre", nombre);
+  agregarDatoResumen("Correo electrónico", email);
+  agregarDatoResumen("Teléfono", telefono);
+  agregarDatoResumen("Asunto", asunto);
+  agregarDatoResumen("Mensaje", mensaje);
 }
-
-

@@ -1,5 +1,4 @@
 //  ARRAY DE DATOS DEL CARRUSEL
-
 const carruselData = [
   {
     id: 1,
@@ -52,22 +51,17 @@ const carruselData = [
 ];
 
 // REFERENCIAS A LOS ELEMENTOS DEL DOM
-
 const caruselImage = document.getElementById("img-carrusel");
-const caruselCaption = document.getElementById("img-carrusel");
-const counterElement = document.getElementById("img-carrusel");
 const prevBtn = document.getElementById("btn-ant");
 const nextBtn = document.getElementById("btn-sig");
 
 //INICIALIZACIÓN DEL ÍNDICE ACTUAL Y ACTUALIZACIÓN INICIAL DEL CARRUSEL
 
 // Se ejecuta al cargar la página para mostrar el primer elemento del array
-
 let currentIndex = 0;
 updateCarusel();
 
 // FUNCIÓN DE ACTUALIZACIÓN DEL CARRUSEL
-
 function updateCarusel() {
   const currentItem = carruselData[currentIndex]; // Obtenemos el elemento correspondiente al índice actual
   caruselImage.src = currentItem.src; // Actualizamos los atributos y contenidos de la imagen de forma dinámica
@@ -95,6 +89,5 @@ function prevSlide() {
 }
 
 //ASIGNACION DE EVENTOS A LOS BOTONES DE NAVEGACIÓN
-
 prevBtn.addEventListener("click", prevSlide);
 nextBtn.addEventListener("click", nextSlide);

@@ -1,81 +1,73 @@
 #contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
 }
 
 .contacto-header {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding-bottom: 15px;
 }
 
 .contacto-header h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: var(--color-primary);
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-primary);
 }
 
 .contacto-header p,
 .contacto-header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 #form-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .campo-grupo {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .contenedor-formulario {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
-    background-color: var(--bg-card);
-    margin-bottom: 20px;
-    padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  background-color: var(--bg-card);
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .error-msg {
-    color: red;
-    font-size: 0.8rem;
+  color: red;
+  font-size: 0.8rem;
 }
 
 /* Campos del formulario */
 .campo-grupo input,
 .campo-grupo textarea {
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    /* Define las características del borde:*/
-    /*   1px: el grosor.*/
-    /*   solid: el tipo de línea, en este caso continua.*/
-    /*   var(--border-color): el color guardado en la variable CSS --border-color. */
-    border-radius: 8px;
-    /*Redondea las esquinas del campo. Cuanto mayor sea el valor, más redondeadas se verán.*/
-    background-color: var(--bg-card);
-    /*Asigna el color de fondo del campo usando la variable --bg-card, que también usás para las tarjetas del sitio.*/
-    color: var(--color-text);
-    /*Define el color del texto que escribe la persona dentro del campo. Usa la variable --color-text para mantener el mismo color general del sitio.*/
-    font: inherit;
-    /* Hace que el campo herede la tipografía de su elemento padre: familia, tamaño y otras propiedades de fuente incluidas en font.*/
-    resize: none;
-    /*Evita que la persona pueda cambiar el tamaño del campo de texto.*/
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  color: var(--color-text);
+  font: inherit;
+  /* Hace que el campo herede la tipografía de su elemento padre: familia, tamaño y otras propiedades de fuente incluidas en font.*/
+  resize: none;
+  /*Evita que la persona pueda cambiar el tamaño del campo de texto.*/
 }
 
-/* Color del borde al seleccionar un campo */
 .campo-grupo input:focus,
 .campo-grupo textarea:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-    /*Separa ese contorno 2 píxeles hacia afuera del borde del campo. Esto permite distinguir el borde normal del contorno violeta de selección.*/
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  /*Separa ese contorno 2 píxeles hacia afuera del borde del campo. Esto permite distinguir el borde normal del contorno violeta de selección.*/
 }
